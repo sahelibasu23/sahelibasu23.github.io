@@ -2,7 +2,7 @@
   ### SECTIONS
 
 - /pages/all-credentials/
-    - /pages/all-credentials/sap.html
+    - https://meharima.github.io/sb/pages/all-credentials/sap.html
     - /pages/all-credentials/misc.html
     - /pages/all-credentials/coursera.html
     - /pages/all-credentials/flearn.html
