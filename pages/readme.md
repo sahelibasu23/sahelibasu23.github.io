@@ -4,18 +4,18 @@
  - 
  - 
 - /pages/BM/
- - bm
- - 
+ - bm.html
+ - resume-BM.html
 - /pages/DS/
-- ds
-- 
+- ds.html
+- resume.html
 - /pages/GD/
- - gd
- - 
+ - gd.html
+ - resume-GD.html
 - /pages/LW/
- - lw
- - 
+ - lw.html
+ - resume-LW.html
 - /pages/TP/
- - tp
- - 
+ - tp.html
+ - resume-TP.html
 
