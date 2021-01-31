@@ -1,5 +1,5 @@
 # LINKS
 
 - /pdf/
-    - /pdf/misc.pdf
-    - /pdf/sap.pdf
+    - https://meharima.github.io/sb/pdf/misc.pdf
+    - https://meharima.github.io/sb/pdf/sap.pdf
