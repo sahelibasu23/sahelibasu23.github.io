@@ -3,31 +3,31 @@
 
 - /pages/all-credentials/
     - https://meharima.github.io/sb/pages/all-credentials/sap.html
-    - /pages/all-credentials/misc.html
-    - /pages/all-credentials/coursera.html
-    - /pages/all-credentials/flearn.html
-    - /pages/all-credentials/ibm.html
-    - /pages/all-credentials/certificates.html
-    - /pages/all-credentials/accomplishments.html
+    - https://meharima.github.io/sb/pages/all-credentials/misc.html
+    - https://meharima.github.io/sb/pages/all-credentials/coursera.html
+    - https://meharima.github.io/sb/pages/all-credentials/flearn.html
+    - https://meharima.github.io/sb/pages/all-credentials/ibm.html
+    - https://meharima.github.io/sb/pages/all-credentials/certificates.html
+    - https://meharima.github.io/sb/pages/all-credentials/accomplishments.html
 
  
 - /pages/BM/
-    - /pages/BM/bm.html
-    - /pages/BM/resume-BM.html
+    - https://meharima.github.io/sb/pages/BM/bm.html
+    - https://meharima.github.io/sb/pages/BM/resume-BM.html
  
 - /pages/DS/
-    - /pages/DS/ds.html
-    - /pages/DS/resume.html
+    - https://meharima.github.io/sb/pages/DS/ds.html
+    - https://meharima.github.io/sb/pages/DS/resume.html
  
 - /pages/GD/
-    - /pages/GD/gd.html
-    - /pages/GD/resume-GD.html
+    - https://meharima.github.io/sb/pages/GD/gd.html
+    - https://meharima.github.io/sb/pages/GD/resume-GD.html
  
 - /pages/LW/
-    - /pages/LW/lw.html
-    - /pages/LW/resume-LW.html
+    - https://meharima.github.io/sb/pages/LW/lw.html
+    - https://meharima.github.io/sb/pages/LW/resume-LW.html
  
 - /pages/TP/
-    - /pages/TP/tp.html
-    - /pages/TP/resume-TP.html
+    - https://meharima.github.io/sb/pages/TP/tp.html
+    - https://meharima.github.io/sb/pages/TP/resume-TP.html
 
