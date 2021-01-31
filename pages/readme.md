@@ -12,22 +12,22 @@
 
  
 - /pages/BM/
-    - bm.html
-    - resume-BM.html
+    - /pages/BM/bm.html
+    - /pages/BM/resume-BM.html
  
 - /pages/DS/
-    - ds.html
-    - resume.html
+    - /pages/DS/ds.html
+    - /pages/DS/resume.html
  
 - /pages/GD/
-    - gd.html
-    - resume-GD.html
+    - /pages/GD/gd.html
+    - /pages/GD/resume-GD.html
  
 - /pages/LW/
-    - lw.html
-    - resume-LW.html
+    - /pages/LW/lw.html
+    - /pages/LW/resume-LW.html
  
 - /pages/TP/
-    - tp.html
-    - resume-TP.html
+    - /pages/TP/tp.html
+    - /pages/TP/resume-TP.html
 
