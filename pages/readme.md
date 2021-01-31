@@ -1,5 +1,5 @@
 # LINKS
-  ## SECTIONS
+  ### SECTIONS
 
 - /pages/all-credentials/
     - /pages/all-credentials/sap.html
