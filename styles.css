@@ -348,3 +348,41 @@ footer p {
   .navlinks.open { display: flex; }
   .focus-grid { grid-template-columns: 1fr; }
 }
+
+
+.portfolio-notice {
+  max-width: var(--max);
+  margin: -10px auto 0;
+  padding: 0 24px;
+}
+
+.notice-content {
+  background: linear-gradient(
+    135deg,
+    rgba(24,56,95,0.06),
+    rgba(24,56,95,0.02)
+  );
+  border: 1px solid #d8e4f2;
+  border-radius: var(--radius);
+  padding: 22px 26px;
+}
+
+.notice-badge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.notice-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
