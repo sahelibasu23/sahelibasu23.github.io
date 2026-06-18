@@ -405,7 +405,7 @@ footer p {
 }
 
 
-#backToTop {
+.backToTop {
   position: fixed;
   right: 24px;
   bottom: 24px;
@@ -425,12 +425,12 @@ footer p {
   z-index: 999;
 }
 
-#backToTop.show {
+.backToTop.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-#backToTop:hover {
+.backToTop:hover {
   transform: translateY(-4px);
 }
