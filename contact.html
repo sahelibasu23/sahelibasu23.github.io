@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18385f">
+  <title>Professional Inquiry | Saheli Basu</title>
+  <meta name="description" content="Submit a professional inquiry to Saheli Basu regarding employment, collaboration, teaching, publishing, speaking, research, or applied systems work.">
+  <meta property="og:title" content="Professional Inquiry | Saheli Basu">
+  <meta property="og:description" content="A privacy-conscious professional inquiry portal for relevant opportunities and collaborations.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html#home" aria-label="Saheli Basu home">Saheli Basu</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="navlinks" id="primary-nav">
+      <a href="index.html#profile">Profile</a>
+      <a href="index.html#journey">Journey</a>
+      <a href="index.html#publishing">Publishing</a>
+      <a href="index.html#philosophy">Philosophy</a>
+      <a href="index.html#systems">Featured Work</a>
+      <a href="index.html#teaching">Teaching</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#capabilities">Capabilities</a>
+      <a href="contact.html" aria-current="page" class="active">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="section inquiry-hero">
+    <div class="inquiry-intro">
+      <p class="section-label">Professional inquiry portal</p>
+      <h1 class="page-title">Let us begin with the context.</h1>
+      <p class="hero-text">Use this form for relevant employment opportunities, professional collaborations, consulting discussions, teaching or speaking engagements, research and media requests, or inquiries connected with SysteMetic.</p>
+      <div class="inquiry-fit" aria-label="Appropriate inquiry categories">
+        <span>Employment</span><span>Consulting</span><span>Collaboration</span><span>Teaching</span><span>Speaking</span><span>Research</span><span>SysteMetic</span>
+      </div>
+    </div>
+
+    <div class="inquiry-layout">
+      <aside class="inquiry-sidebar">
+        <div class="inquiry-sidebar-card">
+          <span class="badge">Before you submit</span>
+          <h2>Share enough context for a meaningful review.</h2>
+          <p>Please describe the opportunity, organization, expected contribution, and relevant timing. Do not include confidential, proprietary, financial, medical, identification, or other sensitive information.</p>
+          <ul class="inquiry-checklist">
+            <li>Use a professional or verifiable email address.</li>
+            <li>Include a LinkedIn profile or organizational website where available.</li>
+            <li>Use a clear inquiry title and explain why the inquiry is relevant to my work.</li>
+            <li>Do not send attachments or confidential material at this stage.</li>
+          </ul>
+        </div>
+        <div class="security-note inquiry-security-note">
+          <strong>Privacy-conscious by design</strong>
+          <span>Your information is used only to review and respond to your inquiry. Submission does not create an employment, consulting, contractual, or other professional relationship.</span>
+        </div>
+      </aside>
+
+      <article class="inquiry-form-card">
+        <div class="form-heading">
+          <p class="section-label">Inquiry details</p>
+          <h2>Tell me what brings you here.</h2>
+          <p>Fields marked with an asterisk are required.</p>
+        </div>
+
+        <!-- SETUP: Replace YOUR_FORM_ID below with your Formspree form ID. -->
+        <form id="professional-inquiry-form" class="professional-inquiry-form" action="https://formspree.io/f/mqerjdgk" method="POST" novalidate>
+          <input type="hidden" id="formspree-subject" name="_subject" value="New professional inquiry from portfolio">
+          <input type="hidden" name="_next" value="success.html">
+          <input type="text" name="company_fax" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <fieldset class="inquiry-type-fieldset">
+            <legend>What brings you here? <span aria-hidden="true">*</span></legend>
+            <div class="inquiry-options">
+              <label><input type="radio" name="inquiry_type" value="Employment opportunity" required><span>Employment opportunity</span></label>
+              <label><input type="radio" name="inquiry_type" value="Consulting or project"><span>Consulting or project</span></label>
+              <label><input type="radio" name="inquiry_type" value="Professional collaboration"><span>Professional collaboration</span></label>
+              <label><input type="radio" name="inquiry_type" value="Teaching or speaking"><span>Teaching or speaking</span></label>
+              <label><input type="radio" name="inquiry_type" value="SysteMetic"><span>SysteMetic</span></label>
+              <label><input type="radio" name="inquiry_type" value="Research, media, or other"><span>Research, media, or other</span></label>
+            </div>
+            <p class="field-error" id="inquiry-type-error" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="form-grid">
+            <div class="form-field full-width">
+              <label for="inquiry-title">Inquiry title <span aria-hidden="true">*</span></label>
+              <input id="inquiry-title" name="inquiry_title" type="text" maxlength="120" required placeholder="Example: Assessment Systems Opportunity – ABC Company">
+              <p class="field-hint">Use a clear title. It will become the subject line if I respond by email.</p>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+              <input id="full-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Professional email <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="160" required>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="organization">Organization or company</label>
+              <input id="organization" name="organization" type="text" autocomplete="organization" maxlength="140">
+            </div>
+
+            <div class="form-field">
+              <label for="role">Role or job title</label>
+              <input id="role" name="role" type="text" autocomplete="organization-title" maxlength="120">
+            </div>
+
+            <div class="form-field">
+              <label for="linkedin">LinkedIn or professional profile <span aria-hidden="true">*</span </label>
+              <input
+                 id="linkedin"
+                 name="professional_profile"
+                 type="url"
+                 inputmode="url"
+                 placeholder="https://"
+                 maxlength="300"
+                 required>
+
+
+              <p class="field-hint">A public professional profile helps establish context.</p>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="website">Organization or verifiable website</label>
+              <input id="website" name="website" type="url" inputmode="url" placeholder="https://" maxlength="300">
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="location">Country or time zone</label>
+              <input id="location" name="location" type="text" autocomplete="country-name" maxlength="100" placeholder="Example: India / IST">
+            </div>
+
+            <div class="form-field">
+              <label for="timeline">Expected timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select a timeline</option>
+                <option>Within 2 weeks</option>
+                <option>Within 1 month</option>
+                <option>Within 1–3 months</option>
+                <option>Exploratory / no fixed timeline</option>
+              </select>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="source">How did you discover my work?<span aria-hidden="true">*</span></label>
+              <select id="source" name="discovery_source" required>
+                <option value="">Select a source</option>
+                <option>Portfolio website</option>
+                <option>LinkedIn</option>
+                <option>Payhip</option>
+                <option>GitHub</option>
+                <option>Google or another search engine</option>
+                <option>Referral</option>
+                <option>SysteMetic</option>
+                <option>Coursera or Alison</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="message">Opportunity or inquiry details <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="8" minlength="40" maxlength="3000" required placeholder="Please explain the opportunity or request, why you are reaching out, the expected contribution, and any relevant timing."></textarea>
+              <div class="textarea-meta"><p class="field-error" aria-live="polite"></p><span id="message-count">0 / 3000</span></div>
+            </div>
+          </div>
+
+          <label class="consent-field">
+            <input id="consent" name="consent" type="checkbox" value="Consent provided" required>
+            <span>I consent to this information being used to review and respond to my professional inquiry. I have not included sensitive or confidential information. <a href="privacy.html" target="_blank" rel="noopener">Read the inquiry privacy notice.</a></span>
+          </label>
+          <p class="field-error consent-error" aria-live="polite"></p>
+
+          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+          <div class="form-actions">
+            <button class="button primary submit-button" type="submit">Submit professional inquiry</button>
+            <a class="button" href="index.html">Return to portfolio</a>
+          </div>
+          <p class="submission-note">This form is intended for legitimate professional communication. Submissions may be screened for spam or abuse.</p>
+        </form>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><strong>Saheli Basu</strong><p>Assessment systems • Quality operations • Applied AI • Learning • Decision support</p></div>
+    <div class="footer-links"><a href="index.html">Portfolio</a><a href="index.html#systems">Featured work</a><a href="privacy.html">Privacy notice</a><a href="contact.html">Contact</a></div>
+    <p class="footer-note">© <span id="year"></span> Saheli Basu. Designed and built as a public, privacy-conscious professional portfolio.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>
