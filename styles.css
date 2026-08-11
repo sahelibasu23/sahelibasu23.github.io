@@ -731,7 +731,7 @@ footer p { font-size: 0.9rem; margin: 0; }
   margin-top: 14px;
 }
 
-/*
+
 .systemetic-mark {
   margin-top: 36px;
   padding-top: 28px;
@@ -766,8 +766,9 @@ footer p { font-size: 0.9rem; margin: 0; }
   color: var(--muted);
   font-size: 0.78rem;
 }
-*/
 
+
+/*
 .systemetic-mark {
   margin-top: 36px;
   text-align: center;
@@ -795,6 +796,7 @@ footer p { font-size: 0.9rem; margin: 0; }
   color: var(--muted);
   font-size: 0.78rem;
 }
+*/
 
 .systemetic-mark em {
   display: block;
