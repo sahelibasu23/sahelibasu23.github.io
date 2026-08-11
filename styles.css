@@ -733,29 +733,35 @@ footer p { font-size: 0.9rem; margin: 0; }
 
 
 .systemetic-mark {
-  margin-top: 22px;
-  padding-top: 18px;
+  margin-top: 36px;
+  padding-top: 28px;
   border-top: 1px solid var(--line);
   text-align: center;
 }
 
 .systemetic-mark img {
-  width: 42px;
-  height: 42px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
-  opacity: 0.85;
+  opacity: 0.95;
 }
 
 .systemetic-mark span {
   display: block;
-  margin-top: 8px;
+  margin-top: 14px;
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 850;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
+.systemetic-mark small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
 
 /* Professional inquiry module */
 .inquiry-hero { padding-top: 72px; }
