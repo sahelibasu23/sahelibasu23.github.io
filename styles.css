@@ -767,37 +767,6 @@ footer p { font-size: 0.9rem; margin: 0; }
   font-size: 0.78rem;
 }
 
-
-/*
-.systemetic-mark {
-  margin-top: 36px;
-  text-align: center;
-}
-
-.systemetic-mark img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-}
-
-.systemetic-mark span {
-  display: block;
-  margin-top: 10px;
-  color: var(--accent);
-  font-size: 0.88rem;
-  font-weight: 850;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.systemetic-mark small {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-*/
-
 .systemetic-mark em {
   display: block;
   margin-top: 6px;
