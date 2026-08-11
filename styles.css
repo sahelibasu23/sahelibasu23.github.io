@@ -708,7 +708,31 @@ footer p { font-size: 0.9rem; margin: 0; }
   }
 }
 
+.nomenclature-note {
+  margin: 22px 0;
+  padding: 18px 20px;
+  background: var(--surface-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+}
 
+.nomenclature-label {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nomenclature-note p:not(.nomenclature-label) {
+  margin: 0 0 10px;
+  font-size: 0.94rem;
+}
+
+.nomenclature-note p:last-child {
+  margin-bottom: 0;
+}
 /* Professional inquiry module */
 .inquiry-hero { padding-top: 72px; }
 .inquiry-intro { max-width: 920px; margin-bottom: 38px; }
