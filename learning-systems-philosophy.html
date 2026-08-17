@@ -329,11 +329,21 @@
     </style>
   </head>
   <body><a class="skip-link" href="#main-content"> Skip to main content </a>
-    <header class="site-header">
-      <nav class="nav"><a class="brand" href="index.html"> Saheli Basu </a>
-        <div class="navlinks"><a href="index.html"> Portfolio </a><a href="contact.html"> Contact </a></div>
-      </nav>
-    </header>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html#home" aria-label="Saheli Basu home">Saheli Basu</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="navlinks" id="primary-nav">
+      <a href="index.html#profile">Profile</a>
+      <a href="index.html#journey">Journey</a>
+      <a href="index.html#publishing">Publishing</a>
+      <a href="index.html#systems">Featured Work</a>
+      <a href="index.html#teaching">Teaching</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
     <main id="main-content">
       <section class="learning-philosophy-page">
         <div class="philosophy-ribbon">
@@ -452,8 +462,12 @@
         <div><strong>Saheli Basu</strong>
           <p>Systems thinking • Learning systems • Quality operations • Applied AI • Decision support</p>
         </div>
-        <div class="footer-links"><a href="#home">Home</a><a href="#systems">Featured work</a><a href="#teaching">Teaching</a><a href="contact.html">Contact</a></div>
-        <p class="footer-note">© <span id="year"></span> Saheli Basu. Designed and built as a public, privacy-conscious professional portfolio.</p>
+    <div class="footer-links">
+      <a href="index.html">Portfolio</a>
+      <a href="index.html#systems">Featured work</a>
+      <a href="index.html#publishing">Publishing</a>
+      <a href="contact.html">Contact</a>
+    </div>        <p class="footer-note">© <span id="year"></span> Saheli Basu. Designed and built as a public, privacy-conscious professional portfolio.</p>
       </div>
     </footer>
   </body>
