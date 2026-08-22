@@ -224,6 +224,7 @@ footer p { font-size: 0.9rem; margin: 0; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 
+/* Portfolio V3 additions */
 .case-study-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -323,6 +324,8 @@ footer p { font-size: 0.9rem; margin: 0; }
 }
 
 
+/* Portfolio V5 — Signature Edition
+   Preserves the V3 visual system; these styles are additive. */
 .profile-quote {
   margin: 26px 0 0;
   padding: 20px 22px;
@@ -400,6 +403,7 @@ footer p { font-size: 0.9rem; margin: 0; }
   .journey-flow::before { left: 22px; }
 }
 
+/* Release 2: supporting-section refinements */
 .projects-section .section-head,
 .capabilities-section .section-head { max-width: 930px; }
 
@@ -455,6 +459,7 @@ footer p { font-size: 0.9rem; margin: 0; }
   .security-note { grid-template-columns: 1fr; }
 }
 
+/* Final production polish — Portfolio Signature Edition 2026 */
 .journey-layout {
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
   gap: 28px;
@@ -500,6 +505,7 @@ footer p { font-size: 0.9rem; margin: 0; }
 }
 
 
+/* Portfolio Release 2 — Independent Professional Publishing */
 .publishing-section {
   border-top: 1px solid var(--line);
 }
@@ -656,6 +662,7 @@ footer p { font-size: 0.9rem; margin: 0; }
   }
 }
 
+/* Final teaching-card alignment */
 .teaching-grid {
   align-items: stretch;
 }
@@ -701,82 +708,7 @@ footer p { font-size: 0.9rem; margin: 0; }
   }
 }
 
-.nomenclature-note {
-  margin: 28px 0;
-  padding: 22px 26px;
-  background: linear-gradient(135deg, rgba(24,56,95,0.065), rgba(24,56,95,0.02));
-  border: 1px solid #d8e4f2;
-  border-radius: var(--radius);
-}
-
-.nomenclature-badge {
-  display: inline-block;
-  margin-bottom: 14px;
-  padding: 6px 11px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: white;
-  font-size: 0.72rem;
-  font-weight: 850;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.nomenclature-note p {
-  margin: 0;
-  font-size: 0.96rem;
-}
-
-.nomenclature-note p + p {
-  margin-top: 14px;
-}
-
-
-.systemetic-mark {
-  margin-top: 36px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-}
-
-.systemetic-mark img {
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
-  display: block;
-}
-
-.systemetic-mark span {
-  margin-top: 10px;
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-weight: 850;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.systemetic-mark small {
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-.systemetic-mark em {
-  display: block;
-  margin-top: 6px;
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-style: normal;
-  font-weight: 750;
-  letter-spacing: 0.06em;
-}
-
+/*New thought*/
 
 .philosophy-extension {
   margin-top: 36px;
@@ -882,6 +814,7 @@ footer p { font-size: 0.9rem; margin: 0; }
 .privacy-grid p { margin: 0; font-size: 0.94rem; }
 @media (max-width: 900px) { .inquiry-layout { grid-template-columns: 1fr; } .inquiry-sidebar { position: static; } }
 @media (max-width: 680px) { .inquiry-form-card { padding: 23px; } .form-grid, .inquiry-options, .privacy-grid { grid-template-columns: 1fr; } .form-field.full-width { grid-column: auto; } .form-actions .button { width: 100%; } }
+
 
 /* Applied AI case-study feature: implementation bridge */
 .applied-ai-bridge {
@@ -990,4 +923,3 @@ footer p { font-size: 0.9rem; margin: 0; }
 .framework-actions {
   justify-content: center;
 }
-
