@@ -998,3 +998,13 @@ footer p { font-size: 0.9rem; margin: 0; }
 .framework-actions {
   justify-content: center;
 }
+
+.work-lineage-statement {
+  margin: 28px 0;
+  padding: 22px 28px;
+  background: var(--surface-soft);
+  border-left: 4px solid var(--accent);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
