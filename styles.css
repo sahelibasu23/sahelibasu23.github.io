@@ -1000,11 +1000,14 @@ footer p { font-size: 0.9rem; margin: 0; }
 }
 
 .work-lineage-statement {
-  margin: 28px 0;
-  padding: 22px 28px;
-  background: var(--surface-soft);
+  margin: 24px 0 34px;
+  padding: 18px 24px;
   border-left: 4px solid var(--accent);
-  color: var(--text);
-  font-size: 1rem;
-  line-height: 1.7;
+  background: var(--soft);
+  color: var(--accent-strong);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.6;
+  max-width: 875px;
+}
 }
