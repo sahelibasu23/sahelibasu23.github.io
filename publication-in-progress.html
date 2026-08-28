@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="SB_Mark_512px.png">
+  <meta name="theme-color" content="#18385f">
+  <title>Publication in Progress | Saheli Basu</title>
+  <meta name="description" content="This professional publication by Saheli Basu is currently being prepared for public release.">
+  <meta property="og:title" content="Publication in Progress | Saheli Basu">
+  <meta property="og:description" content="A professional publication is currently being prepared for public release. Explore published work or return to the portfolio.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .publication-status-page {
+      padding-top: 54px;
+      padding-bottom: 72px;
+    }
+
+    .publication-ribbon {
+      max-width: var(--max);
+      margin: 0 auto 34px;
+      padding: 0 24px;
+    }
+
+    .publication-ribbon-inner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px 28px;
+      align-items: center;
+      padding: 22px 26px;
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: var(--radius);
+      background: linear-gradient(105deg, var(--accent-strong), var(--accent) 58%, #176c70);
+      box-shadow: 0 18px 44px rgba(24,56,95,0.18);
+      color: #fff;
+    }
+
+    .publication-ribbon-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #bfe9e5;
+      font-size: 0.74rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .publication-ribbon-label::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #d5a340;
+      box-shadow: 0 0 0 5px rgba(213,163,64,0.16);
+    }
+
+    .publication-ribbon strong {
+      font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+      line-height: 1.35;
+      color: #fff;
+    }
+
+    .publication-status-layout {
+      max-width: var(--max);
+      margin: auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+      gap: clamp(36px, 6vw, 72px);
+      align-items: center;
+    }
+
+    .publication-portrait-card {
+      overflow: hidden;
+      max-width: 360px;
+      width: 100%;
+      margin: 0 auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .publication-portrait-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: var(--surface-soft);
+    }
+
+    .publication-portrait-meta {
+      padding: 20px 22px 22px;
+    }
+
+    .publication-portrait-meta strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .publication-portrait-meta span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .publication-status-copy {
+      max-width: 760px;
+    }
+
+    .publication-status-copy .page-title {
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .publication-status-copy .hero-text {
+      margin-top: 0;
+      max-width: 760px;
+    }
+
+    .publication-note {
+      margin: 26px 0 0;
+      padding: 20px 22px;
+      border-left: 4px solid #d5a340;
+      border-radius: 0 14px 14px 0;
+      background: #fff8e8;
+    }
+
+    .publication-note strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent-strong);
+    }
+
+    .publication-note p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .publication-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .publication-link-card {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      color: var(--accent);
+      font-weight: 820;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .publication-link-card:hover {
+      transform: translateY(-1px);
+      border-color: #cdd5df;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    }
+
+    .publication-link-card span:last-child {
+      font-size: 1.05rem;
+    }
+
+    .publication-progress-note {
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 860px) {
+      .publication-status-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-portrait-card {
+        max-width: 320px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .publication-status-page {
+        padding-top: 34px;
+      }
+
+      .publication-ribbon-inner {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      .publication-links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html#home" aria-label="Saheli Basu home">Saheli Basu</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <div class="navlinks" id="primary-nav">
+      <a href="index.html#profile">Profile</a>
+      <a href="index.html#journey">Journey</a>
+      <a href="index.html#philosophy">Philosophy</a>      
+      <a href="index.html#teaching">Learning Design</a>
+      <a href="index.html#systems">Case Studies</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#capabilities">Capabilities</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="publication-status-page">
+    <div class="publication-ribbon" aria-label="Publication status">
+      <div class="publication-ribbon-inner">
+        <span class="publication-ribbon-label">Professional publication</span>
+        <strong>Preparing for public release</strong>
+      </div>
+    </div>
+
+    <div class="publication-status-layout">
+      <aside class="publication-portrait-card" aria-label="Author">
+        <img
+          src="editorial_brand_portrait_1000px.webp"
+          alt="Illustrated professional portrait of Saheli Basu"
+          width="1000"
+          height="1255"
+          loading="eager"
+          decoding="async"
+        >
+        <div class="publication-portrait-meta">
+          <strong>Saheli Basu</strong>
+          <span>Professional frameworks, publications, and applied systems work</span>
+        </div>
+      </aside>
+
+      <section class="publication-status-copy" aria-labelledby="publication-title">
+        <p class="section-label">Publication in progress</p>
+        <h1 class="page-title" id="publication-title">This public edition is currently being prepared.</h1>
+
+        <p class="hero-text">
+          Public editions are released progressively as professional frameworks are reviewed,
+          refined, and adapted for broader publication.
+        </p>
+
+        <p>
+          The objective is to preserve practical value, professional accuracy, and appropriate
+          context while ensuring that confidential, proprietary, or implementation-sensitive
+          material is not disclosed.
+        </p>
+
+        <div class="publication-note">
+          <strong>In the meantime</strong>
+          <p>You can explore work that is already publicly available through my research and professional profiles.</p>
+        </div>
+
+        <div class="publication-links" aria-label="Published work and portfolio links">
+          <a class="publication-link-card" href="https://orcid.org/0009-0004-3174-6371" target="_blank" rel="noopener">
+            <span>View ORCID publications</span><span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="publication-link-card" href="https://independent.academia.edu/SaheliBasu10" target="_blank" rel="noopener">
+            <span>Browse work on Academia.edu</span><span aria-hidden="true">↗</span>
+          </a>
+
+       <!----   <a class="publication-link-card" href="https://scholar.google.com/" target="_blank" rel="noopener">
+            <span>View Google Scholar profile</span><span aria-hidden="true">↗</span>
+          </a> ---->
+
+          <a class="publication-link-card" href="index.html#systems">
+            <span>Return to the professional portfolio</span><span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <p class="publication-progress-note">
+          Publications and public editions are introduced progressively as they are prepared for responsible professional distribution.
+        </p>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><strong>Saheli Basu</strong><p>Learning & assessment • Quality operations • Responsible AI</p></div>
+    <div class="footer-links"><a href="index.html#home">Home</a><a href="index.html#teaching">Learning Design</a><a href="index.html#systems">Case Studies</a><a href="contact.html">Contact</a></div>
+    <p class="footer-note">© <span id="year"></span> Saheli Basu. Designed and built as a public, privacy-conscious professional portfolio.</p>
+  </div>  
+</footer>
+<script src="script.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>
