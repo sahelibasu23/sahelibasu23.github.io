@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Selected learning project work by Saheli Basu.">
+<title>Guided Projects Portfolio</title>
+
+<style>
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-soft: #f1f4f7;
+  --text: #18202a;
+  --muted: #66717d;
+  --line: #dfe4e9;
+  --accent: #315c8a;
+  --accent-dark: #25486c;
+  --accent-soft: #eaf1f8;
+  --shadow: 0 12px 35px rgba(24, 32, 42, 0.07);
+  --radius: 14px;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  z-index: 999;
+  padding: 10px 14px;
+  background: var(--text);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 248, 250, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(223, 228, 233, 0.9);
+}
+
+.nav {
+  width: min(100% - 40px, var(--max-width));
+  min-height: 68px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--accent);
+}
+
+main {
+  width: min(100% - 40px, var(--max-width));
+  margin: 0 auto;
+}
+
+.hero {
+  max-width: 900px;
+  padding: 88px 0 70px;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  max-width: 900px;
+  margin: 0 0 20px;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.hero p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.button.secondary:hover,
+.button.secondary:focus-visible {
+  background: var(--accent-soft);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.info-card,
+.disclosure,
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.info-card {
+  padding: 28px;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-heading {
+  max-width: 780px;
+  margin-bottom: 36px;
+}
+
+.section-heading p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-media {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #e9eef3, #f8fafb);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-body {
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-number {
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.project-body p {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0 22px;
+}
+
+.tag {
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.project-actions a {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.disclosure {
+  margin: 60px 0 90px;
+  padding: 28px;
+}
+
+.disclosure strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.disclosure p {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  width: min(100% - 40px, var(--max-width));
+  margin: 0 auto;
+  padding: 35px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+:focus-visible {
+  outline: 3px solid #8bb8e8;
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  .intro-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 65px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  main,
+  .nav,
+  .footer-inner {
+    width: min(100% - 24px, var(--max-width));
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .info-card,
+  .project-body,
+  .disclosure {
+    padding: 22px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="https://sahelibasu23.github.io/">Guided Projects Portfolio</a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#community">Work</a>
+      <a href="#context">Production Context</a>
+      <a href="https://sahelibasu23.github.io/">Back to portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <p class="eyebrow">
+      Learning Design · Guided Projects · Selected Work
+    </p>
+
+    <h1>
+      Project-based learning designed for practical application.
+    </h1>
+
+    <p>
+      Selected learning-project work developed across Coursera's
+      Guided Project ecosystem from 2020 onward. These projects
+      reflect practical approaches to learner guidance, structured
+      workflows, usability, and application-focused learning.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button" href="#community">
+        Explore selected projects
+      </a>
+
+      <a class="button secondary" href="https://sahelibasu23.github.io/#philosophy">
+        Working philosophy
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- CONTEXT -->
+
+  <div class="intro-grid">
+
+    <article class="info-card">
+
+      <span class="timeline-label">
+        2020 onward
+      </span>
+
+      <h2>
+        Coursera Guided Projects
+      </h2>
+
+      <p>
+        Selected project-based learning work developed across
+        Coursera's Guided Project ecosystem, including early
+        community-led work and subsequent projects published
+        through the Coursera Project Network.
+      </p>
+
+    </article>
+
+
+    <article class="info-card">
+
+      <span class="timeline-label">
+        Production context
+      </span>
+
+      <h2>
+        Coursera authoring environment
+      </h2>
+
+      <p>
+        Developed from 2020 onward within Coursera's authoring
+        environment, reflecting the production workflows and
+        learner-experience conventions of the period.
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <!-- SELECTED GUIDED PROJECTS -->
+
+  <section id="community">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        Selected work · 2020 onward
+      </p>
+
+      <h2>
+        Coursera Guided Projects
+      </h2>
+
+      <p>
+        A selection of project-based learning experiences covering
+        web development, design, data, productivity, and practical
+        digital workflows. Original platform availability varies;
+        surviving third-party records are provided where available.
+      </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+      <!-- 01 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/create-and-run-dotnet-docker.svg"
+            alt="Screenshot of Create and run a .NET Core console app in Linux using Docker"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            01 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Create and run a .NET Core console app in Linux using Docker
+          </h3>
+
+          <p>
+            An application-development project focused on creating
+            and running a .NET Core console application in a Linux
+            environment using Docker.
+          </p>
+
+          <div class="tags">
+            <span class="tag">.NET Core</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Linux</span>
+          </div>
+
+          <div class="project-actions">
+            <!--- <a href="YOUR-SCREENCAST-01"> View screencast ↗ </a> --->
+            <a href="https://www.classcentral.com/course/create-and-run-a-dotnet-core-console-app-in-linux-91769" target="_blank" rel="noopener">
+              Class Central →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 02 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/canva-ebrand-logos.svg"
+            alt="Screenshot of Create eye-catching logos using Canva for an ebrand"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            02 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Create eye-catching logos using Canva for an ebrand
+          </h3>
+
+          <p>
+            A logo-design project using Canva to develop concepts
+            from a project brief, explore branding elements, and
+            prepare designs for practical use.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Canva</span>
+            <span class="tag">Logo design</span>
+            <span class="tag">Branding</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-02">View screencast ↗ </a> -->
+            <a
+              href="https://www.classcentral.com/course/create-eye-catching-logos-using-canva-for-an-ebra-61335"
+              target="_blank"
+              rel="noopener"
+            >
+              Class Central →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 03 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/python-kaggle-calculations.svg"
+            alt="Screenshot of Basic calculations with Python in Kaggle"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            03 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Basic calculations with Python in Kaggle
+          </h3>
+
+          <p>
+            An introductory Python project using Kaggle to practice
+            syntax, variables, numbers, functions, and basic
+            mathematical calculations.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Kaggle</span>
+            <span class="tag">Data</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-no.">View screencast ↗ </a> -->
+            <a
+              href="https://www.classcentral.com/course/basic-calculations-with-python-in-kaggle-wj8ni-40217"
+              target="_blank"
+              rel="noopener"
+            >
+              Class Central →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 04 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/website-mockups-vectr.svg"
+            alt="Screenshot of Creating Website Mockups in VECTR"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            04 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Creating Website Mockups in VECTR
+          </h3>
+
+          <p>
+            A practical VECTR project focused on creating website
+            mockups, arranging variations, exporting designs, and
+            sharing the resulting work.
+          </p>
+
+          <div class="tags">
+            <span class="tag">VECTR</span>
+            <span class="tag">Web design</span>
+            <span class="tag">Mockups</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-no.">View screencast ↗ </a> -->
+
+
+            <a
+              href="https://www.mooc-list.com/course/creating-website-mockups-vectr-coursera"
+              target="_blank"
+              rel="noopener"
+            >
+              MOOC List →
+            </a>
+
+            <a
+              href="https://www.getyoureducation.net/course/creating-website-mockups-in-vectr"
+              target="_blank"
+              rel="noopener"
+            >
+              Course record →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 05 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/simple-webpage-github.svg"
+            alt="Screenshot of Simple Webpage Creation in GitHub"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            05 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Simple Webpage Creation in GitHub
+          </h3>
+
+          <p>
+            A beginner project covering GitHub Pages, template
+            editing, repository workflows, and basic HTML/CSS
+            concepts for creating a simple webpage.
+          </p>
+
+          <div class="tags">
+            <span class="tag">GitHub</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-no.">View screencast ↗ </a> -->
+
+
+            <a
+              href="https://www.classcentral.com/course/simple-web-page-creation-in-github-35102"
+              target="_blank"
+              rel="noopener"
+            >
+              Class Central →
+            </a>
+
+            <a
+              href="https://www.mooc-list.com/instructor/saheli-basu"
+              target="_blank"
+              rel="noopener"
+            >
+              MOOC List →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 06 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/webpage-template-github.svg"
+            alt="Screenshot of Web page creation by editing a template in GitHub"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            06 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Web page creation by editing a template in GitHub
+          </h3>
+
+          <p>
+            A practical website-building project using HTML/CSS and
+            a GitHub template repository to create linked webpages
+            and reusable website structures.
+          </p>
+
+          <div class="tags">
+            <span class="tag">GitHub</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Websites</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-no.">View screencast ↗ </a> -->
+
+
+            <a
+              href="https://www.classcentral.com/course/web-page-creation-by-editing-a-template-in-github-35141"
+              target="_blank"
+              rel="noopener"
+            >
+              Class Central →
+            </a>
+
+            <a
+              href="https://www.mooc-list.com/instructor/saheli-basu"
+              target="_blank"
+              rel="noopener"
+            >
+              MOOC List →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 07 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/vectr-improved-graphic-design.svg"
+            alt="Screenshot of Create Improved Graphic Design Using VECTR Part II"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            07 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Create Improved Graphic Design Using VECTR — Part II
+          </h3>
+
+          <p>
+            A continuation of the VECTR series focused on abstract
+            backgrounds, flat character designs, visual balance,
+            symmetry, and graphic refinement.
+          </p>
+
+          <div class="tags">
+            <span class="tag">VECTR</span>
+            <span class="tag">Graphic design</span>
+            <span class="tag">Visual design</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-no.">View screencast ↗ </a> -->
+
+
+            <a
+              href="https://www.mooc-list.com/course/create-improved-graphic-design-using-vectr-part-ii-coursera"
+              target="_blank"
+              rel="noopener"
+            >
+              MOOC List →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 08 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/vectr-custom-vector-design.svg"
+            alt="Screenshot of Creating Custom Vector Graphic Design Using VECTR Part I"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            08 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Creating Custom Vector Graphic Design Using VECTR — Part I
+          </h3>
+
+          <p>
+            An introductory VECTR project covering custom graphic
+            creation, editing, modification, implementation,
+            exporting, and sharing.
+          </p>
+
+          <div class="tags">
+            <span class="tag">VECTR</span>
+            <span class="tag">Vector design</span>
+            <span class="tag">Graphic design</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-no.">View screencast ↗ </a> -->
+
+
+            <a
+              href="https://www.classcentral.com/course/creating-custom-vector-graphic-design-using-vectr-24359"
+              target="_blank"
+              rel="noopener"
+            >
+              Class Central →
+            </a>
+
+            <a
+              href="https://www.mooc-list.com/instructor/saheli-basu"
+              target="_blank"
+              rel="noopener"
+            >
+              MOOC List →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 09 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/canva-designs.svg"
+            alt="Screenshot of Creating designs using Canva"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            09 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Creating designs using Canva
+          </h3>
+
+          <p>
+            A beginner-friendly Canva project covering workspace
+            setup, logo and brochure design, media uploads, and
+            exporting finished designs.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Canva</span>
+            <span class="tag">Graphic design</span>
+            <span class="tag">Branding</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-no.">View screencast ↗ </a> -->
+
+
+            <a
+              href="https://www.classcentral.com/course/creating-designs-using-canva-uyxnh-35054"
+              target="_blank"
+              rel="noopener"
+            >
+              Class Central →
+            </a>
+
+            <a
+              href="https://www.mooc-list.com/course/creating-designs-using-canva-coursera"
+              target="_blank"
+              rel="noopener"
+            >
+              MOOC List →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- 10 -->
+
+      <article class="project-card">
+
+        <div class="project-media">
+          <img
+            src="assets/svg/trello-boards.svg"
+            alt="Screenshot of Get organized with Trello Boards"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-number">
+            10 · GUIDED PROJECT
+          </div>
+
+          <h3>
+            Get organized with Trello Boards
+          </h3>
+
+          <p>
+            A practical Trello project covering board setup,
+            workflow visualization with Kanban, team collaboration,
+            and organization of professional or personal work.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Trello</span>
+            <span class="tag">Kanban</span>
+            <span class="tag">Project management</span>
+          </div>
+
+          <div class="project-actions">
+          <!---  <a href="YOUR-SCREENCAST-no.">View screencast ↗ </a> -->
+
+
+            <a
+              href="https://www.mooc-list.com/course/get-organized-trello-boards-coursera"
+              target="_blank"
+              rel="noopener"
+            >
+              MOOC List →
+            </a>
+
+            <a
+              href="https://opencourser.com/course/avgsng/get-organized-with-trello-boards"
+              target="_blank"
+              rel="noopener"
+            >
+              OpenCourser →
+            </a>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTION CONTEXT -->
+
+  <section id="context">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        Production context
+      </p>
+
+      <h2>
+        Developed within the Guided Project environment.
+      </h2>
+
+      <p>
+        Developed from 2020 onward within Coursera's authoring
+        environment, reflecting the production workflows and
+        learner-experience conventions of the period.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PUBLIC SHARING NOTE -->
+
+  <div class="disclosure">
+
+    <strong>
+      Public Sharing Note
+    </strong>
+
+    <p>
+This page presents selected learning-project work for professional context. Retained materials and other appropriate evidence may be included where available, while historical third-party records provide context for projects whose original platform pages are no longer publicly accessible.
+    </p>
+
+    <a class="button" href="https://sahelibasu23.github.io/contact.html">
+      Professional inquiry
+    </a>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      Coursera Guided Projects · Proof of Work
+    </div>
+
+    <div class="footer-links"> © Saheli Basu. Designed and built as a public, privacy-conscious professional portfolio.
+    </div>
+
+
+  </div>
+
+</footer>
+
+</body>
+</html>
+

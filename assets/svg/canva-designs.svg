@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f1f4f7"/>
+  <rect x="80" y="80" width="1440" height="740" rx="28" fill="#fff" stroke="#dfe4e9" stroke-width="3"/>
+  <text x="800" y="375" text-anchor="middle" font-family="Arial,sans-serif" font-size="52" font-weight="700" fill="#18202a">Creating designs using Canva</text>
+  <text x="800" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#315c8a">Guided Project</text>
+  <text x="800" y="535" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#66717d">Saheli Basu</text>
+</svg>

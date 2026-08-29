@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f1f4f7"/>
+
+  <rect
+    x="80" y="80"
+    width="1440" height="740"
+    rx="28"
+    fill="#ffffff"
+    stroke="#dfe4e9"
+    stroke-width="3"
+  />
+
+  <circle
+    cx="800" cy="310"
+    r="58"
+    fill="#eaf1f8"
+  />
+
+  <path
+    d="M782 280 L842 310 L782 340 Z"
+    fill="#315c8a"
+  />
+
+  <text
+    x="800"
+    y="440"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="46"
+    font-weight="700"
+    fill="#18202a"
+  >
+    Project Screencast
+  </text>
+
+  <text
+    x="800"
+    y="505"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="28"
+    fill="#66717d"
+  >
+    Available where retained and appropriate to share
+  </text>
+
+  <text
+    x="800"
+    y="555"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="25"
+    font-weight="600"
+    fill="#315c8a"
+  >
+    Saheli Basu · Guided Project
+  </text>
+</svg>
