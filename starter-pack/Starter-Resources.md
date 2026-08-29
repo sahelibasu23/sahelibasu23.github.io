@@ -4,9 +4,10 @@ Basic resources and reusable starting points for building a personal portfolio w
 
 ## Included
 
+- `portfolio-template.html` — Simple starting structure for a personal portfolio page.
 - `accessibility-checklist.html` — General accessibility checks for web pages.
 - `design-system-notes.html` — Basic notes on typography, spacing, color, components, and responsive design.
-- `portfolio-template.html` — Simple starting structure for a personal portfolio page.
+- `web-content-guidelines.html` — Basic guidelines about displaying content in web-based platform.
 - `initial-css.css` — Lightweight starter stylesheet for common layouts and components.
 
 ## Notes
