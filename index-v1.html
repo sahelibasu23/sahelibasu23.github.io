@@ -17,80 +17,6 @@
   <link rel="stylesheet" href="styles.css">
   <style>
 
-<!--- more --->
-.portfolio-explore-cta {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.8fr);
-  gap: 28px;
-  align-items: center;
-  margin: 34px auto 42px;
-  max-width: var(--max);
-  padding: 24px 28px;
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-}
-
-.portfolio-explore-cta > div:first-child {
-  max-width: 430px;
-}
-
-.portfolio-explore-cta strong {
-  display: block;
-  color: var(--text);
-  font-size: 1rem;
-  line-height: 1.45;
-  letter-spacing: -0.02em;
-}
-
-.portfolio-explore-cta p {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 0.84rem;
-  line-height: 1.55;
-}
-
-.portfolio-explore-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  justify-content: flex-end;
-}
-
-.portfolio-explore-actions .button {
-  margin: 0;
-}
-
-@media (max-width: 850px) {
-  .portfolio-explore-cta {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-explore-actions {
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 560px) {
-  .portfolio-explore-cta {
-    margin: 24px 20px 34px;
-    padding: 22px 20px;
-  }
-
-  .portfolio-explore-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-explore-actions .button {
-    width: 100%;
-  }
-}
-
-
-<!--- more --->
-
-
     .impact-showcase {
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -225,17 +151,15 @@
     <strong>If you want to know whether this person is interesting, don't just look at the headline.</strong>
     <p>Explore the work, the journey, and the systems behind it.</p>
   </div>
-
-  <div class="portfolio-explore-actions">
-    <a class="button primary" href="#profile">Explore profile</a>
-    <a class="button" href="#journey">Explore journey</a>
-    <a class="button" href="#impact">Explore impact</a>
-    <a class="button" href="#teaching">Explore learning design</a>
-    <a class="button" href="#assessment-design">Explore assessment design</a>
-    <a class="button" href="#systems">Explore quality ops</a>
-  </div>
 </div>
 
+  <section class="portfolio-notice" aria-labelledby="portfolio-note-title">
+    <div class="notice-content">
+      <!--- <div class="notice-badge" id="portfolio-note-title">Public portfolio principles</div>  --->  
+      <strong>If you want to know whether this person is interesting, don't just look at the headline.</strong>
+      <p>Explore the work, the journey, and the systems behind it.</p>
+    </div>
+  </section>
 
       
       <div class="actions">
