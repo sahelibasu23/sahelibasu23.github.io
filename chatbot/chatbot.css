@@ -1,0 +1,804 @@
+/* =========================================================
+   PORTFOLIO CHATBOT
+   Minimal / Editorial / Native to Portfolio
+========================================================= */
+
+.portfolio-chatbot {
+    position: relative;
+    z-index: 9999;
+}
+
+
+/* =========================================================
+   TRIGGER
+========================================================= */
+
+.portfolio-chatbot-trigger {
+    position: fixed;
+    left: 28px;
+    bottom: 28px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    height: 48px;
+    padding: 0 17px;
+
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 999px;
+
+    background: #ffffff;
+    color: #171717;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.portfolio-chatbot-trigger:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.11);
+
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-chatbot-trigger.is-active {
+    transform: translateY(-1px);
+}
+
+.portfolio-chatbot-trigger-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.portfolio-chatbot-panel {
+    position: fixed;
+
+    left: 28px;
+    bottom: 88px;
+
+    width: min(390px, calc(100vw - 56px));
+    max-height: min(700px, calc(100vh - 120px));
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+
+    box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.14);
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(12px) scale(0.98);
+    transform-origin: bottom left;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.portfolio-chatbot-panel.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.portfolio-chatbot-header {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 17px 18px 15px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.portfolio-chatbot-header-copy {
+    min-width: 0;
+}
+
+.portfolio-chatbot-eyebrow {
+    margin-bottom: 5px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+
+    color: #777777;
+}
+
+.portfolio-chatbot-title {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+
+    color: #171717;
+}
+
+.portfolio-chatbot-close {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: -3px -4px 0 10px;
+
+    border: 0;
+    background: transparent;
+
+    color: #666666;
+
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.portfolio-chatbot-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #171717;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.portfolio-chatbot-messages {
+    flex: 1 1 auto;
+
+    /*
+     * Important:
+     * min-height: 0 allows this area to shrink when
+     * the suggestions drawer is expanded, preventing
+     * the action row and input from being pushed out.
+     */
+    min-height: 0;
+
+    max-height: 330px;
+
+    padding: 16px 17px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    scrollbar-width: thin;
+}
+
+.portfolio-chatbot-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.portfolio-chatbot-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.portfolio-chatbot-messages::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 999px;
+}
+
+
+/* =========================================================
+   MESSAGE BUBBLES
+========================================================= */
+
+.portfolio-chatbot-message {
+    display: flex;
+
+    margin-bottom: 10px;
+}
+
+.portfolio-chatbot-message:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-chatbot-message-assistant {
+    justify-content: flex-start;
+}
+
+.portfolio-chatbot-message-user {
+    justify-content: flex-end;
+}
+
+.portfolio-chatbot-message-bubble {
+    max-width: 88%;
+
+    padding: 10px 12px;
+
+    border-radius: 12px;
+
+    font-size: 12.5px;
+    line-height: 1.55;
+
+    white-space: normal;
+}
+
+.portfolio-chatbot-message-assistant
+.portfolio-chatbot-message-bubble {
+    background: #f5f5f3;
+    color: #252525;
+
+    border-bottom-left-radius: 4px;
+}
+
+.portfolio-chatbot-message-user
+.portfolio-chatbot-message-bubble {
+    background: #171717;
+    color: #ffffff;
+
+    border-bottom-right-radius: 4px;
+}
+
+
+/* =========================================================
+   SUGGESTIONS DRAWER
+========================================================= */
+
+.portfolio-chatbot-suggestions-wrapper {
+    flex: 0 0 auto;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+    background: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   TOGGLE
+--------------------------------------------------------- */
+
+.portfolio-chatbot-suggestions-toggle {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 11px 18px;
+
+    border: 0;
+    background: transparent;
+
+    color: #252525;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.portfolio-chatbot-suggestions-toggle:hover {
+    background: rgba(0, 0, 0, 0.025);
+}
+
+.portfolio-chatbot-suggestions-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    color: #777777;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+
+/* ---------------------------------------------------------
+   QUESTION LIST
+--------------------------------------------------------- */
+
+.portfolio-chatbot-suggestions {
+    max-height: 330px;
+
+    padding: 0 18px 13px;
+
+    overflow-y: auto;
+
+    transition:
+        max-height 0.25s ease,
+        padding 0.25s ease;
+
+    scrollbar-width: thin;
+}
+
+.portfolio-chatbot-suggestions::-webkit-scrollbar {
+    width: 5px;
+}
+
+.portfolio-chatbot-suggestions::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.portfolio-chatbot-suggestions::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.14);
+    border-radius: 999px;
+}
+
+
+/* ---------------------------------------------------------
+   COLLAPSED STATE
+--------------------------------------------------------- */
+
+.portfolio-chatbot-suggestions-wrapper.is-collapsed
+.portfolio-chatbot-suggestions {
+    max-height: 0;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   INDIVIDUAL QUESTION
+--------------------------------------------------------- */
+
+.portfolio-chatbot-suggestion {
+    width: 100%;
+
+    display: block;
+
+    margin: 0 0 6px;
+    padding: 9px 11px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+
+    background: #fafafa;
+    color: #303030;
+
+    font-family: inherit;
+    font-size: 11.5px;
+    line-height: 1.4;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.portfolio-chatbot-suggestion:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-chatbot-suggestion:hover {
+    background: #f3f3f1;
+
+    border-color: rgba(0, 0, 0, 0.15);
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.portfolio-chatbot-actions {
+    /*
+     * Important:
+     * The action row is outside the collapsible
+     * suggestions wrapper and must never shrink away.
+     */
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+    background: #ffffff;
+}
+
+.portfolio-chatbot-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    min-height: 30px;
+    padding: 6px 9px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+    color: #666666;
+
+    font-family: inherit;
+    font-size: 10.5px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.portfolio-chatbot-action:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #171717;
+}
+
+.chatbot-reset {
+    margin-right: auto;
+}
+
+.chatbot-contact {
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.portfolio-chatbot-form {
+    /*
+     * Important:
+     * Keep the input row permanently visible.
+     */
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 14px;
+
+    background: #ffffff;
+}
+
+.portfolio-chatbot-input {
+    flex: 1;
+
+    min-width: 0;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 9px;
+
+    background: #fafafa;
+    color: #171717;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        background 0.15s ease;
+}
+
+.portfolio-chatbot-input::placeholder {
+    color: #999999;
+}
+
+.portfolio-chatbot-input:focus {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.28);
+}
+
+.portfolio-chatbot-send {
+    flex: 0 0 auto;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: #171717;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+.portfolio-chatbot-send:hover {
+    transform: translateX(2px);
+}
+
+.portfolio-chatbot-send:active {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   SECTION NAVIGATION LINKS
+========================================================= */
+
+.portfolio-chatbot-section-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 8px;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: inherit;
+
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+
+    cursor: pointer;
+
+    opacity: 0.65;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.portfolio-chatbot-section-link:hover {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   CHATGPT / AI ESCAPE HATCH
+========================================================= */
+
+.portfolio-chatbot-ai-suggestion {
+    margin-top: 10px;
+
+    padding: 12px 13px;
+
+    border: 1px solid currentColor;
+    border-radius: 10px;
+
+    opacity: 0.78;
+}
+
+.portfolio-chatbot-ai-suggestion-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    font-size: 0.76rem;
+    line-height: 1.45;
+}
+
+.portfolio-chatbot-ai-suggestion-text strong {
+    font-size: 0.78rem;
+    font-weight: 650;
+}
+
+.portfolio-chatbot-ai-suggestion-text span {
+    opacity: 0.78;
+}
+
+.portfolio-chatbot-ai-suggestion-button {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 8px;
+
+    font-size: 0.76rem;
+    font-weight: 650;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+.portfolio-chatbot-ai-suggestion-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .portfolio-chatbot-trigger {
+        left: 16px;
+        bottom: 16px;
+
+        height: 44px;
+        padding: 0 14px;
+
+        font-size: 12px;
+    }
+
+
+    .portfolio-chatbot-panel {
+        left: 12px;
+        bottom: 76px;
+
+        width: calc(100vw - 24px);
+
+        max-height: calc(100vh - 100px);
+
+        border-radius: 14px;
+    }
+
+
+    .portfolio-chatbot-header {
+        padding: 15px 15px 13px;
+    }
+
+
+    .portfolio-chatbot-messages {
+        /*
+         * Keep the message area flexible so the
+         * action row and input remain visible.
+         */
+        min-height: 0;
+
+        max-height: 280px;
+
+        padding: 14px 14px;
+    }
+
+
+    .portfolio-chatbot-suggestions-toggle {
+        padding: 10px 15px;
+    }
+
+
+    .portfolio-chatbot-suggestions {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 11px;
+
+        /*
+         * The question list gets its own scroll area
+         * rather than pushing the action/input rows
+         * out of the panel.
+         */
+        max-height: 210px;
+    }
+
+
+    .portfolio-chatbot-suggestion {
+        padding: 9px 10px;
+
+        font-size: 11px;
+    }
+
+
+    .portfolio-chatbot-actions {
+        /*
+         * Always retain this row.
+         */
+        flex: 0 0 auto;
+
+        padding: 9px 11px;
+    }
+
+
+    .portfolio-chatbot-form {
+        /*
+         * Always retain the input row.
+         */
+        flex: 0 0 auto;
+
+        padding: 10px 11px;
+    }
+
+
+    .portfolio-chatbot-input {
+        height: 38px;
+    }
+
+
+    .portfolio-chatbot-send {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portfolio-chatbot-trigger,
+    .portfolio-chatbot-panel,
+    .portfolio-chatbot-suggestions,
+    .portfolio-chatbot-suggestion,
+    .portfolio-chatbot-send {
+        transition: none;
+    }
+}
