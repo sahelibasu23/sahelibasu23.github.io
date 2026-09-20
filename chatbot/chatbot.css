@@ -658,3 +658,76 @@
         transition: none;
     }
 }
+
+/* =========================================================
+   SECTION NAVIGATION LINKS
+========================================================= */
+
+.portfolio-chatbot-section-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    opacity: 0.65;
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.portfolio-chatbot-section-link:hover {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   CHATGPT / AI ESCAPE HATCH
+========================================================= */
+
+.portfolio-chatbot-ai-suggestion {
+    margin-top: 10px;
+    padding: 12px 13px;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    opacity: 0.78;
+}
+
+.portfolio-chatbot-ai-suggestion-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.76rem;
+    line-height: 1.45;
+}
+
+.portfolio-chatbot-ai-suggestion-text strong {
+    font-size: 0.78rem;
+    font-weight: 650;
+}
+
+.portfolio-chatbot-ai-suggestion-text span {
+    opacity: 0.78;
+}
+
+.portfolio-chatbot-ai-suggestion-button {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 0.76rem;
+    font-weight: 650;
+    color: inherit;
+    text-decoration: none;
+}
+
+.portfolio-chatbot-ai-suggestion-button:hover {
+    text-decoration: underline;
+}
