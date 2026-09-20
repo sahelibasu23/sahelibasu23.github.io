@@ -9,7 +9,7 @@
  * No backend.
  */
 
-const PORTFOLIO_DATA = {
+window.PORTFOLIO_DATA = {
 
     identity: {
         name: "Saheli Basu",
