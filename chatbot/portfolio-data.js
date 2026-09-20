@@ -164,7 +164,7 @@ const PORTFOLIO_DATA = {
             }
         ],
 
-        section: "learning-design"
+        section: "learning"
     },
 
     assessment: {
@@ -339,7 +339,7 @@ const PORTFOLIO_DATA = {
             }
         ],
 
-        section: "quality-improvement"
+        section: "quality"
     },
 
     ai: {
@@ -397,7 +397,7 @@ const PORTFOLIO_DATA = {
             "MCP workflows"
         ],
 
-        section: "quality-improvement"
+        section: "quality"
     },
 
     projects: {
