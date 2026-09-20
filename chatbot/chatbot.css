@@ -162,7 +162,7 @@
 
     position: fixed;
 
-    right: 28px;
+    left: 28px;
     bottom: 88px;
 
     z-index: 9999;
@@ -687,7 +687,7 @@
 
     .portfolio-chatbot-trigger {
 
-        right:
+        left:
             16px;
 
         bottom:
@@ -704,7 +704,7 @@
 
     .portfolio-chatbot-panel {
 
-        right:
+        left:
             12px;
 
         bottom:
