@@ -422,7 +422,6 @@
 
 /* ==================================================
    SUGGESTIONS
-================================================== */
 
 .portfolio-chatbot-suggestions {
 
@@ -446,6 +445,154 @@
 
 }
 
+================================================== */
+
+/* ==================================================
+   SUGGESTIONS — COLLAPSIBLE
+================================================== */
+
+.portfolio-chatbot-suggestions-wrapper {
+    flex: 0 0 auto;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.06);
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.06);
+}
+
+
+.portfolio-chatbot-suggestions-toggle {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 18px;
+
+    border: 0;
+
+    background: transparent;
+    color: #111111;
+
+    font-family: inherit;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    opacity: 0.58;
+
+}
+
+
+.portfolio-chatbot-suggestions-toggle:hover {
+    opacity: 1;
+}
+
+
+.portfolio-chatbot-suggestions-icon {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+}
+
+
+.portfolio-chatbot-suggestions {
+
+    max-height: 330px;
+
+    padding:
+        0 18px 12px;
+
+    overflow-y: auto;
+
+    transition:
+        max-height 0.25s ease,
+        padding 0.25s ease;
+
+}
+
+
+.portfolio-chatbot-suggestions-wrapper.is-collapsed
+.portfolio-chatbot-suggestions {
+
+    max-height: 0;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    overflow: hidden;
+
+}
+
+
+.portfolio-chatbot-suggestion {
+
+    width: 100%;
+
+    display: block;
+
+    margin: 0 0 6px;
+
+    padding: 9px 11px;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.09);
+
+    border-radius: 9px;
+
+    background: transparent;
+    color: #111111;
+
+    font-family: inherit;
+
+    font-size: 10.5px;
+    line-height: 1.35;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+
+}
+
+
+.portfolio-chatbot-suggestion:hover {
+
+    background:
+        rgba(0, 0, 0, 0.035);
+
+    border-color:
+        rgba(0, 0, 0, 0.18);
+
+    transform:
+        translateX(2px);
+
+}
 
 /*
  * Vertical suggestion list.
@@ -785,7 +932,7 @@
 
     }
 
-
+/* 
     .portfolio-chatbot-suggestion {
 
         padding:
@@ -794,6 +941,17 @@
         font-size: 10.5px;
 
     }
+*/
+
+
+   .portfolio-chatbot-suggestions-toggle {
+    padding: 10px 15px;
+}
+
+.portfolio-chatbot-suggestions {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 
     .portfolio-chatbot-bubble {
