@@ -790,6 +790,20 @@
         scrollMessagesToBottom();
     }
 
+    function scrollMessagesToBottom() {
+
+    const container =
+        document.getElementById(
+            "portfolio-chatbot-messages"
+        );
+
+    if (!container) {
+        return;
+    }
+
+    container.scrollTop =
+        container.scrollHeight;
+}
 
     /* =========================================================
        SUGGESTIONS
