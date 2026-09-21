@@ -180,6 +180,25 @@
       font-size: 0.86rem;
     }
 
+    .publication-current-note {
+      margin: 22px 0 0;
+      padding: 18px 22px;
+      border-left: 4px solid #3E7C86;
+      border-radius: 0 14px 14px 0;
+      background: #eef7f6;
+    }
+
+    .publication-current-note strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent-strong);
+    }
+
+    .publication-current-note p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
     @media (max-width: 860px) {
       .publication-status-layout {
         grid-template-columns: 1fr;
@@ -262,6 +281,10 @@
           context while ensuring that confidential, proprietary, or implementation-sensitive
           material is not disclosed.
         </p>
+
+        <div class="publication-current-note"><strong>Release status: Initial public version</strong>
+          <p>A public version of this work is available through open research platforms.Further refinement of documentation, metadata, and publication records is ongoing as the work develops. </p>
+        </div>
 
         <div class="publication-note">
           <strong>In the meantime</strong>
