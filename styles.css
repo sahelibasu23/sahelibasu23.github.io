@@ -1051,3 +1051,70 @@ footer p { font-size: 0.9rem; margin: 0; }
 @media (max-width: 560px) {
   .assessment-domain-grid { grid-template-columns: 1fr; }
 }
+
+.hero-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  max-width: 900px;
+}
+
+.hero-link {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  text-decoration: none;
+
+  background: #F8F6F1;
+  border: 1px solid rgba(16,42,67,0.12);
+  border-radius: 14px;
+
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-link span {
+  font-size: 0.75rem;
+  color: #607D8B;
+  margin-bottom: 0.7rem;
+}
+
+.hero-link strong {
+  color: #102A43;
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.hero-link small {
+  color: #607D8B;
+  line-height: 1.5;
+}
+
+.hero-link:hover {
+  transform: translateY(-3px);
+  border-color: #3E7C86;
+}
+
+.hero-link.primary {
+  background: #102A43;
+}
+
+.hero-link.primary strong,
+.hero-link.primary span,
+.hero-link.primary small {
+  color: #F8F6F1;
+}
+
+
+@media (max-width: 900px) {
+  .hero-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .hero-links {
+    grid-template-columns: 1fr;
+  }
+}
