@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Supported Learning Design, Development & Delivery — Practice Portfolio</title>
+
+<style>
+:root {
+  --ink: #172033;
+  --muted: #667085;
+  --blue: #2563eb;
+  --blue-soft: #eff6ff;
+  --green: #16805b;
+  --green-soft: #ecfdf3;
+  --amber: #b45309;
+  --amber-soft: #fff7ed;
+  --border: #e5e7eb;
+  --surface: #ffffff;
+  --bg: #f6f8fb;
+  --shadow: 0 10px 30px rgba(16,24,40,.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.65 Inter, ui-sans-serif, system-ui,
+        -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* HERO */
+
+header {
+  background: linear-gradient(
+    135deg,
+    #102a56,
+    #2563eb 58%,
+    #60a5fa
+  );
+  color: white;
+  padding: 56px 0 44px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 36px;
+  align-items: end;
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 800;
+  opacity: .82;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 7px 11px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.1);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.02;
+  margin: 10px 0 18px;
+  letter-spacing: -.04em;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 760px;
+  color: #e8f0ff;
+  margin: 0;
+}
+
+.hero-card {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.hero-card strong {
+  display: block;
+  font-size: 30px;
+}
+
+.hero-card span {
+  font-size: 13px;
+  color: #dbeafe;
+}
+
+/* NAV */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+nav .wrap {
+  display: flex;
+  gap: 8px;
+  overflow: auto;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+nav a {
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 8px 11px;
+  border-radius: 9px;
+  color: #475467;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+/* MAIN */
+
+main {
+  padding: 40px 0 70px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.card,
+.asset {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.card {
+  padding: 24px;
+}
+
+.intro h2 {
+  margin-top: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ASSETS */
+
+.asset {
+  margin: 26px 0;
+  overflow: hidden;
+}
+
+.asset-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.asset-title {
+  display: flex;
+  gap: 14px;
+}
+
+.asset-number {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-weight: 900;
+  flex: none;
+}
+
+.asset h2 {
+  margin: 0 0 3px;
+  font-size: 22px;
+}
+
+.asset-tag {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.asset-body {
+  padding: 26px;
+}
+
+/* LAYOUT */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.mini {
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 17px;
+  background: #fff;
+}
+
+.mini h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* CALLOUTS */
+
+.callout {
+  border-left: 4px solid var(--blue);
+  background: var(--blue-soft);
+  padding: 15px 17px;
+  border-radius: 0 12px 12px 0;
+  margin: 16px 0;
+}
+
+.green {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
+.amber {
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+
+/* TIMELINE */
+
+.timeline {
+  border-left: 2px solid #dbeafe;
+  margin-left: 8px;
+  padding-left: 22px;
+}
+
+.step {
+  position: relative;
+  margin: 0 0 22px;
+}
+
+.step:before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #2563eb;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #eff6ff;
+}
+
+/* QUOTE */
+
+.quote {
+  font-size: 17px;
+  color: #344054;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 13px;
+}
+
+/* PILLS */
+
+.pill {
+  display: inline-block;
+  background: #f2f4f7;
+  border: 1px solid #eaecf0;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 12px;
+  margin: 2px;
+}
+
+/* TABLE */
+
+.rubric {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rubric th,
+.rubric td {
+  text-align: left;
+  padding: 11px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.rubric th {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* WORKFLOW */
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.workflow .mini strong {
+  display: block;
+  font-size: 12px;
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+
+/* BUTTONS */
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 9px;
+  padding: 8px 11px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f8fafc;
+}
+
+.btn.primary {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--border);
+  background: #fff;
+  padding: 30px 0 50px;
+  color: var(--muted);
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .hero,
+  .intro,
+  .grid,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-card {
+    margin-top: 4px;
+  }
+
+  .asset-head {
+    padding: 20px;
+  }
+
+  .asset-body {
+    padding: 20px;
+  }
+}
+
+@media print {
+
+  nav,
+  .toolbar {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .asset,
+  .card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  header {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="wrap hero">
+
+    <div>
+
+      <span class="badge">
+          AI-Supported Learning Design, Development & Delivery 
+      </span>
+ 
+<div style="margin-top:12px;font-size:14px;font-weight:700;opacity:.9;">
+  Saheli Basu · Practice Portfolio
+</div>
+
+
+      <h1>
+        Teaching Fractions Through Visual Models
+      </h1>
+
+      <p>
+A fictional-but-realistic example showing how an educator
+can use LLM-based AI tools to support learning design,
+development and delivery while retaining professional
+judgment and responsibility.
+      </p>
+
+    </div>
+
+    <div class="hero-card">
+
+      <span>Portfolio demonstrates</span>
+
+      <strong>5 areas</strong>
+
+      <span>
+  lesson design · assessment · communication · resources ·
+  repeatable AI-supported workflow
+
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<nav>
+
+  <div class="wrap">
+
+    <a href="#overview">Overview</a>
+
+    <a href="#lesson">
+      1 · Lesson
+    </a>
+
+    <a href="#assessment">
+      2 · Assessment
+    </a>
+
+    <a href="#communication">
+      3 · Communication
+    </a>
+
+    <a href="#resources">
+      4 · Resources
+    </a>
+
+    <a href="#routine">
+      5 · Routine
+    </a>
+
+  </div>
+
+</nav>
+
+
+<main class="wrap">
+
+
+<!-- OVERVIEW -->
+
+<section id="overview" class="intro">
+
+  <div class="card">
+
+    <h2>
+      What this portfolio demonstrates
+    </h2>
+
+<p>
+This is not a collection of generic AI-generated worksheets.
+The educator starts with a learning goal, uses AI tools
+to question and refine the plan, adapts the resulting
+materials for learners, and makes the final professional
+decisions.
+
+</p>
+
+
+    <div class="callout">
+
+      <strong>Core principle:</strong>
+
+My expertise → AI as a thinking partner →
+professional judgment → usable learning materials.
+
+    </div>
+
+  </div>
+
+
+  <div class="card">
+
+    <h2>
+      Context
+    </h2>
+
+    <div class="grid-3">
+
+      <div class="mini">
+
+        <div class="label">
+          Subject
+        </div>
+
+        <strong>
+          Mathematics
+        </strong>
+
+      </div>
+
+
+      <div class="mini">
+
+        <div class="label">
+          Topic
+        </div>
+
+        <strong>
+          Fractions
+        </strong>
+
+      </div>
+
+
+      <div class="mini">
+
+        <div class="label">
+          Stage
+        </div>
+
+        <strong>
+          Upper primary
+        </strong>
+
+      </div>
+
+    </div>
+
+    <p class="muted">
+
+      The exact year level is intentionally generic;
+      this is a model rather than a claim about a
+      particular classroom.
+
+    </p>
+
+  </div>
+
+</section>
+
+<section class="card" style="margin-bottom:28px">
+
+  <h2>
+    Learning foundation
+  </h2>
+
+  <p>
+    This practice portfolio draws on learning from educator-focused
+    AI courses, guidance and supporting online materials, with
+    particular attention to AI fluency, learning design,
+    responsible use and human professional judgment.
+  </p>
+
+  <div class="grid">
+
+    <div class="mini">
+
+      <h3>
+        AI Fluency for Educators
+      </h3>
+
+      <p class="muted">
+        Claude Academy · Educator-focused course
+      </p>
+
+      <a href="https://academy.claude.com/courses/ai-fluency-for-educators"
+         target="_blank"
+         rel="noopener">
+        View course
+      </a>
+
+    </div>
+
+    <div class="mini">
+
+      <h3>
+        AI for Educators
+      </h3>
+
+      <p class="muted">
+        OpenAI Academy · Educator-focused course
+      </p>
+
+      <a href="https://academy.openai.com/home/courses/ai-for-educators-lc8j1"
+         target="_blank"
+         rel="noopener">
+        View course
+      </a>
+
+    </div>
+
+  </div>
+
+  <p class="muted" style="margin-bottom:0">
+The portfolio also draws on relevant online guidance,
+examples and other supporting materials relating to AI,
+education and learning design. These materials inform the
+approach; the portfolio represents my own application
+and professional interpretation.
+
+  </p>
+
+</section>
+
+
+
+<!-- ASSET 1 -->
+
+<section id="lesson" class="asset">
+
+  <div class="asset-head">
+
+    <div class="asset-title">
+
+      <div class="asset-number">
+        1
+      </div>
+
+      <div>
+
+        <h2>
+          Refined lesson plan
+        </h2>
+
+        <div class="asset-tag">
+          A plan strengthened by teaching expertise
+          and AI-supported refinement
+        </div>
+
+      </div>
+
+    </div>
+
+    <span class="pill">
+      Teacher-facing
+    </span>
+
+  </div>
+
+
+  <div class="asset-body">
+
+    <div class="grid">
+
+      <div>
+
+        <div class="label">
+          Learning goal
+        </div>
+
+        <p>
+          Students will explain what a fraction represents
+          and connect fraction notation to visual models.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <div class="label">
+          Success criteria
+        </div>
+
+        <ul>
+
+          <li>
+            I can identify the fraction represented
+            by a model.
+          </li>
+
+          <li>
+            I can explain what the numerator and
+            denominator represent.
+          </li>
+
+          <li>
+            I can represent the same fraction
+            in more than one way.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="timeline" style="margin-top:24px">
+
+      <div class="step">
+
+        <strong>
+          1 · Warm-up — 5 min
+        </strong>
+
+        <p>
+          Present a familiar sharing situation.
+          Ask: “How could we represent this
+          mathematically?” Collect several ideas
+          without immediately correcting them.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <strong>
+          2 · Explore — 10 min
+        </strong>
+
+        <p>
+          Students work with fraction circles or
+          drawn models. They identify equal parts
+          and match models to notation.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <strong>
+          3 · Discuss — 10 min
+        </strong>
+
+        <p>
+          Compare representations. Explicitly address
+          the misconception that the denominator tells
+          how many pieces we have.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <strong>
+          4 · Apply — 10 min
+        </strong>
+
+        <p>
+          Students create and label a representation
+          for a given fraction, then explain it
+          to a partner.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <strong>
+          5 · Check — 5 min
+        </strong>
+
+        <p>
+          Exit ticket: “Draw a model for 3/4 and
+          explain what each number tells us.”
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="grid" style="margin-top:24px">
+
+      <div class="mini">
+
+        <h3>
+          Likely misconceptions
+        </h3>
+
+        <ul>
+
+          <li>
+            Reading the denominator as the number
+            of selected pieces.
+          </li>
+
+          <li>
+            Assuming a larger denominator always
+            means a larger fraction.
+          </li>
+
+          <li>
+            Using unequal parts in a visual model.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="mini">
+
+        <h3>
+          Differentiation
+        </h3>
+
+        <ul>
+
+          <li>
+            Use pre-divided visual models
+            as a scaffold.
+          </li>
+
+          <li>
+            Provide vocabulary prompts:
+            whole, equal parts, numerator,
+            denominator.
+          </li>
+
+          <li>
+            Extend confident learners with
+            equivalent fractions and justification.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="callout green">
+
+      <strong>
+        Human decision point:
+      </strong>
+
+AI can suggest sequencing, questions and possible
+misconceptions, but the educator decides whether
+those suggestions fit the learners, curriculum,
+context and available time.
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ASSET 2 -->
+
+<section id="assessment" class="asset">
+
+  <div class="asset-head">
+
+    <div class="asset-title">
+
+      <div class="asset-number">
+        2
+      </div>
+
+      <div>
+
+        <h2>
+          Student activity & assessment
+        </h2>
+
+        <div class="asset-tag">
+          One core task with support and extension
+          built around the same learning goal
+        </div>
+
+      </div>
+
+    </div>
+
+    <span class="pill">
+      Student-facing
+    </span>
+
+  </div>
+
+
+  <div class="asset-body">
+
+    <div class="quote">
+
+      <strong>
+        Fraction Detective
+      </strong>
+
+      <br><br>
+
+      Look at each fraction model.
+
+      What fraction is represented?
+
+      How do you know?
+
+      Draw another representation of the
+      same fraction.
+
+      Then explain your answer to a partner.
+
+    </div>
+
+
+    <div class="grid" style="margin-top:18px">
+
+      <div class="mini">
+
+        <h3>
+          Support version
+        </h3>
+
+        <p>
+          Students receive a model already divided
+          into equal parts, a word bank, and
+          sentence starters:
+        </p>
+
+        <p>
+
+          <span class="pill">
+            The whole is…
+          </span>
+
+          <span class="pill">
+            There are… equal parts
+          </span>
+
+          <span class="pill">
+            I shaded…
+          </span>
+
+          <span class="pill">
+            Therefore…
+          </span>
+
+        </p>
+
+      </div>
+
+
+      <div class="mini">
+
+        <h3>
+          Extension version
+        </h3>
+
+        <p>
+          “Two students disagree about whether two
+          models represent the same fraction.
+          Decide whether they are equivalent and
+          prove your answer using a diagram and words.”
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <h3>
+      Quick assessment rubric
+    </h3>
+
+
+    <table class="rubric">
+
+      <thead>
+
+        <tr>
+
+          <th>
+            Look for
+          </th>
+
+          <th>
+            Developing
+          </th>
+
+          <th>
+            Secure
+          </th>
+
+          <th>
+            Extending
+          </th>
+
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+        <tr>
+
+          <td>
+            Model
+          </td>
+
+          <td>
+            Parts may be unequal or unclear.
+          </td>
+
+          <td>
+            Model shows equal parts accurately.
+          </td>
+
+          <td>
+            Uses multiple accurate representations.
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td>
+            Notation
+          </td>
+
+          <td>
+            Needs support connecting numbers to model.
+          </td>
+
+          <td>
+            Correctly identifies numerator
+            and denominator.
+          </td>
+
+          <td>
+            Explains relationships and equivalent forms.
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td>
+            Explanation
+          </td>
+
+          <td>
+            Gives an answer with limited reasoning.
+          </td>
+
+          <td>
+            Explains how the model supports the answer.
+          </td>
+
+          <td>
+            Justifies, compares or generalises
+            the reasoning.
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+
+<!-- ASSET 3 -->
+
+<section id="communication" class="asset">
+
+  <div class="asset-head">
+
+    <div class="asset-title">
+
+      <div class="asset-number">
+        3
+      </div>
+
+      <div>
+
+        <h2>
+          Communication draft
+        </h2>
+
+        <div class="asset-tag">
+          A family-facing message that is clear,
+          useful and non-alarming
+        </div>
+
+      </div>
+
+    </div>
+
+    <span class="pill">
+      Family-facing
+    </span>
+
+  </div>
+
+
+  <div class="asset-body">
+
+    <div class="card"
+         style="box-shadow:none;background:#fafbfc">
+
+      <p>
+        <strong>
+          Supporting our fraction learning
+        </strong>
+      </p>
+
+      <p>
+        Dear Families,
+      </p>
+
+      <p>
+        Over the next few lessons, we are focusing
+        on developing students’ understanding of
+        fractions—not just getting the correct answer,
+        but being able to explain how they know.
+      </p>
+
+      <p>
+        A simple way to support this at home is to
+        ask questions such as:
+      </p>
+
+      <ul>
+
+        <li>
+          “How do you know?”
+        </li>
+
+        <li>
+          “Can you show that another way?”
+        </li>
+
+        <li>
+          “What does this fraction represent?”
+        </li>
+
+      </ul>
+
+      <p>
+        There is no need for additional worksheets
+        or formal practice. Everyday examples involving
+        sharing, portions or comparing quantities can
+        provide useful opportunities for discussion.
+      </p>
+
+      <p>
+        Thank you for supporting your child’s learning.
+      </p>
+
+    </div>
+
+
+    <div class="callout amber">
+
+      <strong>
+        AI use:
+      </strong>
+
+      The communication was refined for clarity
+      and tone. The educator remains responsible
+      for deciding what is appropriate to communicate
+      to families.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ASSET 4 -->
+
+<section id="resources" class="asset">
+
+  <div class="asset-head">
+
+    <div class="asset-title">
+
+      <div class="asset-number">
+        4
+      </div>
+
+      <div>
+
+        <h2>
+          Supporting resources
+        </h2>
+
+        <div class="asset-tag">
+          A small reusable toolkit that makes
+          the lesson easier to teach
+        </div>
+
+      </div>
+
+    </div>
+
+    <span class="pill">
+      Teacher toolkit
+    </span>
+
+  </div>
+
+
+  <div class="asset-body">
+
+    <div class="grid-3">
+
+
+      <div class="mini">
+
+        <h3>
+          Question bank
+        </h3>
+
+        <ul>
+
+          <li>
+            How do you know?
+          </li>
+
+          <li>
+            Can you show another way?
+          </li>
+
+          <li>
+            What does this number represent?
+          </li>
+
+          <li>
+            What would change if the whole changed?
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="mini">
+
+        <h3>
+          Vocabulary card
+        </h3>
+
+        <p>
+          <strong>Whole</strong> —
+          the complete amount.
+        </p>
+
+        <p>
+          <strong>Equal parts</strong> —
+          parts of the same size.
+        </p>
+
+        <p>
+          <strong>Numerator</strong> —
+          how many equal parts are being considered.
+        </p>
+
+        <p>
+          <strong>Denominator</strong> —
+          how many equal parts make the whole.
+        </p>
+
+      </div>
+
+
+      <div class="mini">
+
+        <h3>
+          Exit ticket
+        </h3>
+
+        <p>
+          <strong>
+            Draw 3/4.
+          </strong>
+        </p>
+
+        <p>
+          Label the numerator and denominator.
+        </p>
+
+        <p>
+          Explain in one sentence what each
+          number tells you.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="grid" style="margin-top:18px">
+
+
+      <div class="mini">
+
+        <h3>
+          Teacher observation checklist
+        </h3>
+
+        <label>
+          <input type="checkbox">
+          Uses equal parts
+        </label>
+
+        <br>
+
+        <label>
+          <input type="checkbox">
+          Connects model to notation
+        </label>
+
+        <br>
+
+        <label>
+          <input type="checkbox">
+          Explains reasoning
+        </label>
+
+        <br>
+
+        <label>
+          <input type="checkbox">
+          Responds to a partner’s explanation
+        </label>
+
+      </div>
+
+
+      <div class="mini">
+
+        <h3>
+          Fast reteach prompt
+        </h3>
+
+        <p>
+          “If I divide one whole into four equal parts,
+          what does one part represent? What would
+          three of those parts represent? Show me
+          before you tell me.”
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ASSET 5 -->
+
+<section id="routine" class="asset">
+
+  <div class="asset-head">
+
+    <div class="asset-title">
+
+      <div class="asset-number">
+        5
+      </div>
+
+      <div>
+
+        <h2>
+          Repeatable AI-supported routine
+        </h2>
+
+        <div class="asset-tag">
+          The workflow I can reuse for future lessons
+        </div>
+
+      </div>
+
+    </div>
+
+    <span class="pill">
+      Reusable workflow
+    </span>
+
+  </div>
+
+
+  <div class="asset-body">
+
+
+    <div class="workflow">
+
+
+      <div class="mini">
+
+        <strong>
+          01 · START
+        </strong>
+
+        <h3>
+          Bring my expertise
+        </h3>
+
+        <p>
+          Write the learning goal, rough activity,
+          context and concerns in my own words.
+        </p>
+
+      </div>
+
+
+      <div class="mini">
+
+        <strong>
+          02 · CHALLENGE
+        </strong>
+
+        <h3>
+            Use AI to probe
+
+        </h3>
+
+<p>
+  Use an LLM-based AI tool to identify gaps,
+  possible misconceptions, weak sequencing
+  and opportunities for stronger questions.
+</p>
+
+
+      </div>
+
+
+      <div class="mini">
+
+        <strong>
+          03 · BUILD
+        </strong>
+
+        <h3>
+          Generate variations
+        </h3>
+
+        <p>
+          Create student tasks, scaffolds, extensions,
+          questions and supporting materials.
+        </p>
+
+      </div>
+
+
+      <div class="mini">
+
+        <strong>
+          04 · JUDGE
+        </strong>
+
+        <h3>
+          Teacher final check
+        </h3>
+
+        <p>
+          Keep, adapt or reject suggestions based
+          on students, curriculum, context and
+          professional judgment.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="callout" style="margin-top:24px">
+
+      <strong>
+        Reusable prompt pattern:
+      </strong>
+
+      <br>
+
+      “Here is my lesson idea and context.
+      Do not rewrite it immediately. First identify
+      likely misconceptions, gaps and places where
+      students may struggle. Then suggest improvements
+      while preserving my teaching approach. Finally,
+      create a student task, a support option,
+      an extension option and a quick assessment.”
+
+    </div>
+
+
+    <h3>
+      My quality-control checklist
+    </h3>
+
+
+    <div class="grid-3">
+
+      <div class="mini">
+        ☐ Fits the learning goal
+      </div>
+
+      <div class="mini">
+        ☐ Appropriate for my learners
+      </div>
+
+      <div class="mini">
+        ☐ Sounds like my teaching
+      </div>
+
+      <div class="mini">
+        ☐ Curriculum/context checked
+      </div>
+
+      <div class="mini">
+        ☐ AI suggestions verified
+      </div>
+
+      <div class="mini">
+        ☐ I would actually use it
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- REFLECTION -->
+
+<section class="card" style="margin-top:28px">
+
+  <h2>
+    Portfolio reflection
+  </h2>
+
+<p>
+  Using AI did not replace the lesson-design process.
+  It made parts of the process faster and gave me another
+  way to test my thinking. The most useful change was having
+  a repeatable workflow: start with my own expertise, use AI
+  to challenge and expand the idea, then apply professional
+  judgment before anything reaches learners.
+</p>
+
+
+  <p class="muted">
+
+    <strong>
+      Evidence of learning:
+    </strong>
+
+    The five assets above show a progression from one lesson
+    idea to a reusable approach that can be applied to
+    other topics.
+
+  </p>
+
+
+  <div class="toolbar">
+
+    <button
+      class="btn primary"
+      onclick="window.print()">
+      Print / Save as PDF
+    </button>
+
+    <button
+      class="btn"
+      onclick="toggleNotes()">
+      Show course notes
+    </button>
+
+  </div>
+
+
+  <div
+    id="notes"
+    hidden
+    class="callout"
+    style="margin-bottom:0">
+
+    <strong>
+      Learning-aligned view:
+    </strong>
+
+    Asset 1 = refined lesson plan ·
+    Asset 2 = student activity/assessment ·
+    Asset 3 = communication ·
+    Asset 4 = supporting resources ·
+    Asset 5 = repeatable routine.
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+  <div class="wrap">
+
+    <strong>
+  AI-Supported Learning Design, Development & Delivery
+    </strong>
+
+    <br>
+
+<p class="muted" style="margin:10px 0 0;font-size:13px;">
+  Illustrative practice portfolio · Fictional classroom example ·
+  Selected examples rather than full production assets
+</p>
+
+
+
+  </div>
+
+</footer>
+
+
+<script>
+
+function toggleNotes() {
+
+  const notes = document.getElementById("notes");
+
+  notes.hidden = !notes.hidden;
+
+}
+
+
+/* Highlight the current section in the navigation */
+
+const links =
+  [...document.querySelectorAll("nav a")];
+
+const sections =
+  links.map(link =>
+    document.querySelector(
+      link.getAttribute("href")
+    )
+  );
+
+
+const observer =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          links.forEach(link => {
+            link.style.color = "";
+          });
+
+
+          const active =
+            links.find(link =>
+              link.getAttribute("href") ===
+              "#" + entry.target.id
+            );
+
+
+          if (active) {
+            active.style.color = "#2563eb";
+          }
+
+        }
+
+      });
+
+    },
+    {
+      rootMargin:
+        "-25% 0px -65% 0px"
+    }
+  );
+
+
+sections.forEach(section => {
+
+  if (section) {
+    observer.observe(section);
+  }
+
+});
+
+</script>
+
+</body>
+</html>

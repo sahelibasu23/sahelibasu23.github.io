@@ -1,0 +1,3456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI for Educators | My Practice Portfolio</title>
+
+<style>
+
+/* =========================================================
+   BASE
+========================================================= */
+
+:root {
+  --navy: #172033;
+  --blue: #315efb;
+  --blue-dark: #2446c7;
+  --blue-light: #eef3ff;
+
+  --green: #17865b;
+  --green-light: #ecfdf5;
+
+  --orange: #b86a16;
+  --orange-light: #fff7ed;
+
+  --purple: #7654d6;
+  --purple-light: #f4f0ff;
+
+  --red: #c24141;
+  --red-light: #fff1f1;
+
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+
+  --white: #ffffff;
+
+  --shadow-sm:
+    0 1px 2px rgba(15, 23, 42, .05);
+
+  --shadow:
+    0 10px 30px rgba(15, 23, 42, .07);
+
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--gray-50);
+  color: var(--navy);
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+h1 {
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  letter-spacing: -0.025em;
+}
+
+p {
+  color: var(--gray-600);
+}
+
+.small {
+  font-size: 13px;
+}
+
+.muted {
+  color: var(--gray-500);
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+main {
+  padding: 40px 0 90px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255,255,255,.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #13234b,
+      #315efb
+    );
+
+  color: white;
+
+  padding: 64px 0 54px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 40px;
+  align-items: end;
+}
+
+.eyebrow {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.08);
+
+  color: #e9efff;
+
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.hero h1 {
+  margin: 16px 0;
+
+  font-size:
+    clamp(38px, 6vw, 66px);
+}
+
+.hero-subtitle {
+  margin: -4px 0 18px;
+  color: #dbe5ff;
+  font-size: clamp(18px, 2.4vw, 25px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.hero p {
+  max-width: 760px;
+
+  color: #e2eaff;
+
+  font-size: 18px;
+}
+
+.hero-card {
+  padding: 24px;
+
+  border:
+    1px solid rgba(255,255,255,.2);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255,255,255,.1);
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-card .big {
+  display: block;
+
+  font-size: 40px;
+  font-weight: 850;
+
+  margin: 5px 0;
+}
+
+.hero-card p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav {
+  position: sticky;
+  top: 0;
+
+  z-index: 50;
+
+  background:
+    rgba(255,255,255,.94);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom:
+    1px solid var(--gray-200);
+}
+
+.nav-inner {
+  display: flex;
+
+  gap: 4px;
+
+  overflow-x: auto;
+
+  padding: 8px 0;
+}
+
+.nav a {
+  flex: 0 0 auto;
+
+  text-decoration: none;
+
+  color: var(--gray-600);
+
+  font-size: 13px;
+  font-weight: 750;
+
+  padding: 8px 11px;
+
+  border-radius: 9px;
+}
+
+.nav a:hover,
+.nav a.active {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+  background: var(--white);
+
+  border:
+    1px solid var(--gray-200);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  padding: 25px;
+}
+
+.card.flat {
+  box-shadow: none;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.overview {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr .9fr;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.principle {
+  border-left:
+    4px solid var(--blue);
+
+  background:
+    var(--blue-light);
+
+  padding: 18px 20px;
+
+  border-radius:
+    0 12px 12px 0;
+}
+
+.principle strong {
+  color: var(--blue-dark);
+}
+
+
+/* =========================================================
+   SECTION HEADERS
+========================================================= */
+
+.section-heading {
+  margin: 48px 0 18px;
+}
+
+.section-heading .kicker {
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.section-heading h2 {
+  margin: 5px 0;
+  font-size: 30px;
+}
+
+.section-heading p {
+  max-width: 760px;
+  margin: 0;
+}
+
+
+/* =========================================================
+   COMPARISON
+========================================================= */
+
+.comparison {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 18px;
+}
+
+.demo-card {
+  border-radius: 16px;
+
+  padding: 24px;
+
+  border: 1px solid var(--gray-200);
+
+  background: white;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.demo-card.course {
+  border-top:
+    4px solid var(--gray-300);
+}
+
+.demo-card.practice {
+  border-top:
+    4px solid var(--blue);
+}
+
+.demo-label {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 850;
+
+  text-transform: uppercase;
+  letter-spacing: .08em;
+
+  background: var(--gray-100);
+  color: var(--gray-600);
+}
+
+.practice .demo-label {
+  background: var(--blue-light);
+  color: var(--blue-dark);
+}
+
+.demo-card h3 {
+  margin: 13px 0 7px;
+}
+
+
+/* =========================================================
+   ASSET
+========================================================= */
+
+.asset {
+  margin: 22px 0;
+
+  background: white;
+
+  border:
+    1px solid var(--gray-200);
+
+  border-radius:
+    var(--radius);
+
+  box-shadow:
+    var(--shadow);
+
+  overflow: hidden;
+}
+
+.asset-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 24px 26px;
+
+  border-bottom:
+    1px solid var(--gray-200);
+}
+
+.asset-heading {
+  display: flex;
+  gap: 14px;
+}
+
+.asset-number {
+  display: grid;
+
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  background:
+    var(--blue-light);
+
+  color:
+    var(--blue);
+
+  border-radius:
+    11px;
+
+  font-weight: 900;
+}
+
+.asset-header h3 {
+  margin: 0;
+
+  font-size: 22px;
+}
+
+.asset-subtitle {
+  color: var(--gray-500);
+
+  font-size: 12px;
+
+  margin-top: 3px;
+}
+
+.asset-body {
+  padding: 26px;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  background:
+    var(--gray-100);
+
+  color:
+    var(--gray-600);
+}
+
+.tag.blue {
+  background: var(--blue-light);
+  color: var(--blue-dark);
+}
+
+.tag.green {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.tag.orange {
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+.tag.purple {
+  background: var(--purple-light);
+  color: var(--purple);
+}
+
+
+/* =========================================================
+   GRIDS
+========================================================= */
+
+.two-col {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 18px;
+}
+
+.three-col {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+.four-col {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   INFO BOX
+========================================================= */
+
+.info-box {
+  border:
+    1px solid var(--gray-200);
+
+  border-radius: 13px;
+
+  padding: 17px;
+
+  background:
+    var(--gray-50);
+}
+
+.info-box h4 {
+  margin:
+    0 0 7px;
+}
+
+.info-box p {
+  margin:
+    0;
+}
+
+
+/* =========================================================
+   HUMAN / AI SPLIT
+========================================================= */
+
+.human-ai {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: 18px;
+}
+
+.human-box,
+.ai-box {
+  padding: 18px;
+
+  border-radius: 13px;
+}
+
+.human-box {
+  background:
+    var(--green-light);
+
+  border:
+    1px solid #c8f0df;
+}
+
+.ai-box {
+  background:
+    var(--purple-light);
+
+  border:
+    1px solid #e3d9ff;
+}
+
+.human-box h4 {
+  color: var(--green);
+}
+
+.ai-box h4 {
+  color: var(--purple);
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+  border-left:
+    2px solid #d9e4ff;
+
+  margin:
+    20px 0 20px 8px;
+
+  padding-left:
+    24px;
+}
+
+.timeline-item {
+  position: relative;
+
+  margin-bottom:
+    25px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+
+  position: absolute;
+
+  width: 11px;
+  height: 11px;
+
+  left: -31px;
+  top: 6px;
+
+  border-radius: 50%;
+
+  background:
+    var(--blue);
+
+  box-shadow:
+    0 0 0 4px var(--blue-light);
+}
+
+.timeline-item h4 {
+  margin:
+    0 0 4px;
+}
+
+.timeline-item p {
+  margin:
+    0;
+}
+
+
+/* =========================================================
+   STUDENT ACTIVITY
+========================================================= */
+
+.activity {
+  border:
+    1px solid var(--gray-200);
+
+  border-radius: 15px;
+
+  padding: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f9fbff,
+      #ffffff
+    );
+}
+
+.activity-title {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.activity-title h3 {
+  margin: 0;
+}
+
+.behaviour {
+  display: grid;
+
+  grid-template-columns:
+    42px 1fr;
+
+  gap: 12px;
+
+  padding: 14px 0;
+
+  border-bottom:
+    1px solid var(--gray-200);
+}
+
+.behaviour:last-child {
+  border-bottom: none;
+}
+
+.behaviour-number {
+  display: grid;
+
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 10px;
+
+  background:
+    var(--blue-light);
+
+  color:
+    var(--blue);
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   OBSERVATION RUBRIC
+========================================================= */
+
+table {
+  width: 100%;
+
+  border-collapse:
+    collapse;
+
+  margin-top: 15px;
+}
+
+th,
+td {
+  text-align: left;
+
+  vertical-align: top;
+
+  padding:
+    12px 10px;
+
+  border-bottom:
+    1px solid var(--gray-200);
+}
+
+th {
+  color:
+    var(--gray-500);
+
+  font-size: 11px;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    .07em;
+}
+
+
+/* =========================================================
+   COMMUNICATION
+========================================================= */
+
+.message {
+  max-width: 800px;
+
+  margin: auto;
+
+  padding: 28px;
+
+  border:
+    1px solid var(--gray-200);
+
+  border-radius:
+    15px;
+
+  background:
+    #fbfcfe;
+}
+
+.message p,
+.message li {
+  color:
+    #344054;
+}
+
+
+/* =========================================================
+   RESOURCES
+========================================================= */
+
+.resource-icon {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 10px;
+
+  background:
+    var(--blue-light);
+
+  color:
+    var(--blue);
+
+  font-weight: 900;
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   WORKFLOW
+========================================================= */
+
+.workflow {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 10px;
+}
+
+.workflow-step {
+  position: relative;
+
+  border:
+    1px solid var(--gray-200);
+
+  background:
+    white;
+
+  padding:
+    17px;
+
+  border-radius:
+    13px;
+}
+
+.workflow-step .number {
+  color:
+    var(--blue);
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+.workflow-step h4 {
+  margin:
+    7px 0;
+}
+
+.workflow-step p {
+  font-size: 13px;
+  margin: 0;
+}
+
+
+/* =========================================================
+   PROMPT
+========================================================= */
+
+.prompt {
+  position: relative;
+
+  background:
+    #111827;
+
+  color:
+    #e5e7eb;
+
+  border-radius:
+    14px;
+
+  padding:
+    20px;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.7;
+
+  overflow-x:
+    auto;
+}
+
+.copy-btn {
+  position: absolute;
+
+  right: 12px;
+  top: 12px;
+
+  border:
+    1px solid #374151;
+
+  background:
+    #1f2937;
+
+  color:
+    #d1d5db;
+
+  border-radius:
+    7px;
+
+  padding:
+    6px 9px;
+
+  cursor:
+    pointer;
+
+  font-size:
+    11px;
+}
+
+
+/* =========================================================
+   REFLECTION
+========================================================= */
+
+.reflection {
+  background:
+    linear-gradient(
+      135deg,
+      #f5f8ff,
+      #ffffff
+    );
+
+  border:
+    1px solid #dce5ff;
+}
+
+.reflection blockquote {
+  margin:
+    20px 0;
+
+  padding:
+    18px 20px;
+
+  border-left:
+    4px solid var(--blue);
+
+  background:
+    white;
+
+  border-radius:
+    0 12px 12px 0;
+
+  font-size:
+    17px;
+
+  color:
+    #344054;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.btn {
+  padding:
+    9px 13px;
+
+  border-radius:
+    9px;
+
+  border:
+    1px solid var(--gray-200);
+
+  background:
+    white;
+
+  color:
+    var(--navy);
+
+  font-weight:
+    750;
+
+  cursor:
+    pointer;
+}
+
+.btn:hover {
+  background:
+    var(--gray-50);
+}
+
+.btn.primary {
+  background:
+    var(--blue);
+
+  color:
+    white;
+
+  border-color:
+    var(--blue);
+}
+
+
+/* =========================================================
+   CHECKLIST
+========================================================= */
+
+.checklist {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 9px;
+}
+
+.check {
+  padding:
+    11px 13px;
+
+  border:
+    1px solid var(--gray-200);
+
+  border-radius:
+    9px;
+
+  background:
+    white;
+}
+
+
+/* 
+=========================================================
+   FOOTER 1
+========================================================= 
+
+footer {
+  padding:
+    35px 0 55px;
+
+  border-top:
+    1px solid var(--gray-200);
+
+  background:
+    white;
+
+  color:
+    var(--gray-500);
+}
+
+*/
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero-grid,
+  .overview,
+  .comparison,
+  .two-col,
+  .human-ai {
+    grid-template-columns:
+      1fr;
+  }
+
+  .three-col {
+    grid-template-columns:
+      1fr;
+  }
+
+  .four-col {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .workflow {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .container {
+    width:
+      min(100% - 24px, 1180px);
+  }
+
+  .hero {
+    padding:
+      45px 0;
+  }
+
+  main {
+    padding-top:
+      25px;
+  }
+
+  .asset-body,
+  .asset-header,
+  .card {
+    padding:
+      20px;
+  }
+
+  .four-col,
+  .workflow,
+  .checklist {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+  .nav,
+  .actions,
+  .copy-btn {
+    display:
+      none !important;
+  }
+
+  body {
+    background:
+      white;
+  }
+
+  .asset,
+  .card {
+    box-shadow:
+      none;
+
+    break-inside:
+      avoid;
+  }
+
+  .hero {
+    print-color-adjust:
+      exact;
+
+    -webkit-print-color-adjust:
+      exact;
+  }
+
+}
+
+.mindset-panel {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+  margin-top: 42px;
+  box-shadow: var(--shadow);
+}
+
+.mindset-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.mindset-card {
+  width: 100%;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px;
+  min-height: 180px;
+  box-shadow: 0 5px 18px rgba(16,24,40,.05);
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.mindset-card:hover {
+  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  box-shadow: 0 12px 28px rgba(16,24,40,.09);
+}
+
+.mindset-step {
+  display: inline-block;
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-bottom: 15px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .07em;
+}
+
+.mindset-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.mindset-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+  max-width: none;
+}
+
+
+/* Tablet */
+
+@media (max-width: 800px) {
+
+  .mindset-panel {
+    padding: 24px;
+  }
+
+  .mindset-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 560px) {
+
+  .mindset-panel {
+    padding: 20px;
+  }
+
+  .mindset-cards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* 
+=========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  margin-top: 90px;
+  padding: 42px 0 38px;
+  background: #f8fafc;
+  border-top: 1px solid var(--border);
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-brand strong {
+  display: block;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.footer-brand span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-author {
+  text-align: right;
+}
+
+.footer-author span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.footer-author strong {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.footer-line {
+  height: 1px;
+  margin: 28px 0;
+  background: var(--border);
+}
+
+.footer-middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 900px;
+}
+
+.footer-middle p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 4px;
+  margin-top: 34px;
+
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.footer-arrow {
+  margin: 0 5px;
+  color: #94a3b8;
+}
+
+
+@media (max-width: 600px) {
+
+  footer {
+    margin-top: 60px;
+  }
+
+  .footer-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-author {
+    text-align: left;
+  }
+
+  .footer-middle {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .footer-bottom {
+    justify-content: flex-start;
+    line-height: 2;
+  }
+
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<header class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <span class="eyebrow">
+        AI for Educators · My Practice Portfolio
+      </span>
+
+      <h1>
+        From AI Demo<br>
+        to Human-Led Practice
+      </h1>
+
+
+      <h2 class="hero-subtitle">
+        AI-Supported Learning Design, Development & Delivery
+      </h2>
+
+      <p>
+An example of how ideas and practices from AI-focused courses,
+guidance and supporting materials can be adapted into a real
+teaching workflow — using LLMs to support thinking and
+development while keeping the educator, context and
+professional judgment at the centre.
+
+      </p>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <span class="small">
+        ONE LESSON · FIVE ASSETS
+      </span>
+
+      <span class="big">
+        Teamwork
+      </span>
+
+      <p>
+        Listen · Contribute · Build
+      </p>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =======================================================
+     NAV
+======================================================= -->
+
+<nav class="nav">
+
+  <div class="container nav-inner">
+
+    <a href="#overview">
+      Overview
+    </a>
+
+    <a href="#examples">
+      Two examples
+    </a>
+
+    <a href="#lesson">
+      1 · Lesson
+    </a>
+
+    <a href="#assessment">
+      2 · Assessment
+    </a>
+
+    <a href="#communication">
+      3 · Communication
+    </a>
+
+    <a href="#resources">
+      4 · Resources
+    </a>
+
+    <a href="#routine">
+      5 · Routine
+    </a>
+
+    <a href="#reflection">
+      Reflection
+    </a>
+
+  </div>
+
+</nav>
+
+
+
+<main class="container">
+
+
+<!-- =======================================================
+     OVERVIEW
+======================================================= -->
+
+<section id="overview">
+
+  <div class="overview">
+
+
+    <div class="card">
+
+      <span class="tag blue">
+        THE IDEA
+      </span>
+
+      <h2>
+What I took from the learning
+      </h2>
+
+      <p>
+Across AI-focused courses, guidance and supporting materials,
+I encountered a useful pattern: start with real educational work,
+use LLMs to question, develop and extend the initial thinking,
+and turn useful ideas into practical materials that can actually
+be used.
+
+      </p>
+
+      <p>
+I don't need to reproduce any particular example or workflow.
+I can draw on the principles that are useful and adapt them to
+the way I already teach, plan and design learning.
+      </p>
+
+      <div class="principle">
+
+        <strong>
+          My approach:
+        </strong>
+
+        <br>
+
+        My experience → AI as a thinking partner →
+        my decisions → classroom-ready materials
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <span class="tag green">
+        THE LESSON
+      </span>
+
+      <h2>
+        Working Effectively in a Team
+      </h2>
+
+      <p>
+        Rather than assessing whether a student's idea is
+        “right” or “wrong,” this lesson turns teamwork into
+        observable behaviours.
+      </p>
+
+      <div class="three-col">
+
+        <div class="info-box">
+
+          <h4>
+            Listen
+          </h4>
+
+          <p class="small">
+            Give attention and allow others to finish.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <h4>
+            Contribute
+          </h4>
+
+          <p class="small">
+            Offer a relevant idea, question or resource.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <h4>
+            Build
+          </h4>
+
+          <p class="small">
+            Respond to and develop another person's idea.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     TWO EXAMPLES
+======================================================= -->
+
+<section id="examples">
+
+  <div class="section-heading">
+
+    <span class="kicker">
+      Context
+    </span>
+
+    <h2>
+      Two ways of looking at the course
+    </h2>
+
+    <p>
+      The first example demonstrates the course's five-asset
+      structure. The second shows how I would translate that
+      structure into my own practice.
+    </p>
+
+  </div>
+
+
+  <div class="comparison">
+
+
+    <div class="demo-card course">
+
+      <span class="demo-label">
+        Example 01 · Course-style demo
+      </span>
+
+      <h3>
+        Fractions Through Visual Models
+      </h3>
+
+      <p>
+        A straightforward example of the five assets:
+        lesson plan, student assessment, communication,
+        supporting resources and repeatable routine.
+      </p>
+
+      <ul>
+
+        <li>
+          Clear learning objective
+        </li>
+
+        <li>
+          Differentiated student activity
+        </li>
+
+        <li>
+          Family communication
+        </li>
+
+        <li>
+          Teacher resources
+        </li>
+
+        <li>
+          Reusable AI workflow
+        </li>
+
+      </ul>
+
+      <span class="tag">
+        Demonstrates the framework
+      </span>
+
+    </div>
+
+
+    <div class="demo-card practice">
+
+      <span class="demo-label">
+        Example 02 · My adapted practice
+      </span>
+
+      <h3>
+        Teamwork: Listen, Contribute, Build
+      </h3>
+
+      <p>
+        A more human-led example. I start with the soft skill
+        I actually want students to practise, define what
+        that looks like in observable behaviour, and then
+        use LLM to help me design the experience.
+      </p>
+
+      <ul>
+
+        <li>
+          Human-defined learning goal
+        </li>
+
+        <li>
+          Observable behaviours
+        </li>
+
+        <li>
+          AI-supported activity design
+        </li>
+
+        <li>
+          Teacher observation rather than AI judgment
+        </li>
+
+        <li>
+          Reusable planning routine
+        </li>
+
+      </ul>
+
+      <span class="tag blue">
+        Demonstrates the framework in practice
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     ASSET 1
+======================================================= -->
+
+<section id="lesson">
+
+  <div class="section-heading">
+
+    <span class="kicker">
+      Asset 01
+    </span>
+
+    <h2>
+      Refined Lesson Plan
+    </h2>
+
+    <p>
+      The lesson starts with my intended student behaviour.
+      LLM is used to challenge the design and suggest
+      ways to make the learning observable.
+    </p>
+
+  </div>
+
+
+  <article class="asset">
+
+    <div class="asset-header">
+
+      <div class="asset-heading">
+
+        <div class="asset-number">
+          1
+        </div>
+
+        <div>
+
+          <h3>
+            Working Effectively in a Team
+          </h3>
+
+          <div class="asset-subtitle">
+            40–45 minute life skills / employability lesson
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <span class="tag green">
+        Teacher-facing
+      </span>
+
+    </div>
+
+
+    <div class="asset-body">
+
+
+      <div class="two-col">
+
+        <div class="info-box">
+
+          <h4>
+            Learning objective
+          </h4>
+
+          <p>
+            Students will demonstrate three observable
+            teamwork behaviours: active listening,
+            constructive contribution, and building
+            on another person's idea.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <h4>
+            Success criteria
+          </h4>
+
+          <ul>
+
+            <li>
+              I listen without interrupting.
+            </li>
+
+            <li>
+              I contribute something relevant.
+            </li>
+
+            <li>
+              I acknowledge or build on another person's idea.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <h3>
+        Lesson sequence
+      </h3>
+
+
+      <div class="timeline">
+
+
+        <div class="timeline-item">
+
+          <h4>
+            1 · Starter — 5 minutes
+          </h4>
+
+          <p>
+            Ask students to think of a team that worked well
+            and identify one behaviour that made the team
+            effective. Collect behaviours rather than names.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <h4>
+            2 · Make the invisible visible — 7 minutes
+          </h4>
+
+          <p>
+            Introduce the three target behaviours:
+            <strong>Listen, Contribute, Build.</strong>
+            Model each one briefly with a volunteer.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <h4>
+            3 · Team challenge — 15 minutes
+          </h4>
+
+          <p>
+            In small groups, students complete a short
+            planning challenge. Each student receives a
+            different piece of information needed by the team.
+            The task cannot be completed effectively unless
+            students listen to one another and share information.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <h4>
+            4 · Reflection — 8 minutes
+          </h4>
+
+          <p>
+            Students identify one behaviour they demonstrated
+            and one behaviour they want to improve.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <h4>
+            5 · Exit check — 5 minutes
+          </h4>
+
+          <p>
+            Students complete three short prompts about
+            observable teamwork behaviour.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="human-ai">
+
+
+        <div class="human-box">
+
+          <h4>
+            What I decided
+          </h4>
+
+          <ul>
+
+            <li>
+              The lesson should focus on behaviour,
+              not vague personality traits.
+            </li>
+
+            <li>
+              Students need to experience teamwork,
+              not just discuss it.
+            </li>
+
+            <li>
+              Assessment should be based on observable
+              actions.
+            </li>
+
+            <li>
+              The activity must require information
+              sharing so teamwork is genuinely needed.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="ai-box">
+
+          <h4>
+Where AI supported the process
+          </h4>
+
+          <ul>
+
+            <li>
+              Suggested alternative team challenges.
+            </li>
+
+            <li>
+              Helped identify behaviours that could
+              be observed during the activity.
+            </li>
+
+            <li>
+              Generated possible reflection questions.
+            </li>
+
+            <li>
+              Helped create differentiated versions
+              without changing the core objective.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="principle">
+
+        <strong>
+          Important:
+        </strong>
+
+AI does not decide whether a student is “good at teamwork.”
+ The teacher observes
+        specific behaviours against agreed criteria.
+
+      </div>
+
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+<!-- =======================================================
+     ASSET 2
+======================================================= -->
+
+<section id="assessment">
+
+  <div class="section-heading">
+
+    <span class="kicker">
+      Asset 02
+    </span>
+
+    <h2>
+      Student Activity & Assessment
+    </h2>
+
+    <p>
+      The activity is deliberately designed so the teamwork
+      behaviours are necessary to complete the task.
+    </p>
+
+  </div>
+
+
+  <article class="asset">
+
+    <div class="asset-header">
+
+      <div class="asset-heading">
+
+        <div class="asset-number">
+          2
+        </div>
+
+        <div>
+
+          <h3>
+            The Team Challenge
+          </h3>
+
+          <div class="asset-subtitle">
+            Students must combine information to complete the task
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <span class="tag blue">
+        Student-facing
+      </span>
+
+    </div>
+
+
+    <div class="asset-body">
+
+
+      <div class="activity">
+
+        <div class="activity-title">
+
+          <h3>
+            Your team has a problem to solve.
+          </h3>
+
+          <span class="tag orange">
+            15 minutes
+          </span>
+
+        </div>
+
+
+        <p>
+          Your team is planning a one-day event for a group
+          of students. Your team must agree on:
+        </p>
+
+
+        <ol>
+
+          <li>
+            The order of the activities.
+          </li>
+
+          <li>
+            How much time to give each activity.
+          </li>
+
+          <li>
+            What resources are needed.
+          </li>
+
+          <li>
+            One reason for your final plan.
+          </li>
+
+        </ol>
+
+
+        <div class="callout">
+
+          <strong>
+            Important rule:
+          </strong>
+
+          Each team member receives different information.
+          You need to listen to one another to get the
+          complete picture.
+
+        </div>
+
+
+        <h3>
+          Your three teamwork behaviours
+        </h3>
+
+
+        <div class="behaviour">
+
+          <div class="behaviour-number">
+            1
+          </div>
+
+          <div>
+
+            <strong>
+              LISTEN
+            </strong>
+
+            <p>
+              Give attention when another person is speaking.
+              Do not interrupt. Ask for clarification if needed.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="behaviour">
+
+          <div class="behaviour-number">
+            2
+          </div>
+
+          <div>
+
+            <strong>
+              CONTRIBUTE
+            </strong>
+
+            <p>
+              Share relevant information, an idea,
+              a question or a useful suggestion.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="behaviour">
+
+          <div class="behaviour-number">
+            3
+          </div>
+
+          <div>
+
+            <strong>
+              BUILD
+            </strong>
+
+            <p>
+              Respond to another person's contribution
+              by extending it, connecting it to something
+              else, or asking a useful follow-up question.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <h3>
+        Teacher observation rubric
+      </h3>
+
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Behaviour
+            </th>
+
+            <th>
+              Beginning
+            </th>
+
+            <th>
+              Demonstrated
+            </th>
+
+            <th>
+              Consistent
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+          <tr>
+
+            <td>
+              <strong>
+                Listen
+              </strong>
+            </td>
+
+            <td>
+              Frequently interrupts or misses
+              information from others.
+            </td>
+
+            <td>
+              Usually allows others to speak
+              and responds to what they said.
+            </td>
+
+            <td>
+              Consistently listens, checks understanding
+              and responds appropriately.
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              <strong>
+                Contribute
+              </strong>
+            </td>
+
+            <td>
+              Contribution is limited or unrelated
+              to the task.
+            </td>
+
+            <td>
+              Offers relevant information,
+              ideas or questions.
+            </td>
+
+            <td>
+              Makes useful contributions that
+              help the group move forward.
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              <strong>
+                Build
+              </strong>
+            </td>
+
+            <td>
+              Rarely responds to others'
+              contributions.
+            </td>
+
+            <td>
+              Acknowledges or develops another
+              person's idea.
+            </td>
+
+            <td>
+              Regularly connects, extends or
+              improves ideas collaboratively.
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+      <div class="two-col" style="margin-top:20px">
+
+
+        <div class="info-box">
+
+          <h4>
+            Student reflection
+          </h4>
+
+          <ol>
+
+            <li>
+              Which teamwork behaviour did you demonstrate?
+            </li>
+
+            <li>
+              What did you do that showed this?
+            </li>
+
+            <li>
+              Which behaviour will you deliberately practise next time?
+            </li>
+
+          </ol>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <h4>
+            Why this is assessable
+          </h4>
+
+          <p>
+            The assessment does not attempt to measure
+            personality. It looks for specific, observable
+            behaviours during a defined activity.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+<!-- =======================================================
+     ASSET 3
+======================================================= -->
+
+<section id="communication">
+
+  <div class="section-heading">
+
+    <span class="kicker">
+      Asset 03
+    </span>
+
+    <h2>
+      Communication Draft
+    </h2>
+
+    <p>
+      A short message that prepares students for the
+      learning experience rather than simply announcing it.
+    </p>
+
+  </div>
+
+
+  <article class="asset">
+
+    <div class="asset-header">
+
+      <div class="asset-heading">
+
+        <div class="asset-number">
+          3
+        </div>
+
+        <div>
+
+          <h3>
+            Student pre-lesson message
+          </h3>
+
+          <div class="asset-subtitle">
+            Setting expectations for the teamwork activity
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <span class="tag purple">
+        Communication
+      </span>
+
+    </div>
+
+
+    <div class="asset-body">
+
+      <div class="message">
+
+        <p>
+          <strong>
+            Tomorrow's lesson: Teamwork
+          </strong>
+        </p>
+
+        <p>
+          Tomorrow we'll be doing a short team challenge.
+          The goal isn't simply to finish the task — we'll
+          also be practising what effective teamwork actually
+          looks like.
+        </p>
+
+        <p>
+          During the activity, pay particular attention to
+          three behaviours:
+        </p>
+
+        <ul>
+
+          <li>
+            <strong>Listen</strong> — give people space to speak
+            and pay attention to their information.
+          </li>
+
+          <li>
+            <strong>Contribute</strong> — share useful information,
+            ideas or questions.
+          </li>
+
+          <li>
+            <strong>Build</strong> — respond to someone else's
+            idea and help develop it.
+          </li>
+
+        </ul>
+
+        <p>
+          You don't need to be the person who talks the most.
+          Good teamwork is about helping the group make
+          progress together.
+        </p>
+
+        <p>
+          Come ready to participate, listen and try something
+          deliberately different from your usual group-work habits.
+        </p>
+
+      </div>
+
+
+      <div class="human-ai">
+
+        <div class="human-box">
+
+          <h4>
+            My judgement
+          </h4>
+
+          <p>
+            I wanted the message to avoid presenting
+            teamwork as a personality trait. Students
+            should understand that these are behaviours
+            they can practise and improve.
+          </p>
+
+        </div>
+
+
+        <div class="ai-box">
+
+          <h4>
+            AI support
+          </h4>
+
+          <p>
+AI helped me create alternative versions with different
+tones and lengths, then I chose and edited the version that
+sounded appropriate for my students.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+<!-- =======================================================
+     ASSET 4
+======================================================= -->
+
+<section id="resources">
+
+  <div class="section-heading">
+
+    <span class="kicker">
+      Asset 04
+    </span>
+
+    <h2>
+      Supporting Resources
+    </h2>
+
+    <p>
+      These are the small tools that turn the lesson from
+      an idea into something easy to run repeatedly.
+    </p>
+
+  </div>
+
+
+  <article class="asset">
+
+    <div class="asset-header">
+
+      <div class="asset-heading">
+
+        <div class="asset-number">
+          4
+        </div>
+
+        <div>
+
+          <h3>
+            Teamwork Toolkit
+          </h3>
+
+          <div class="asset-subtitle">
+            Teacher + student resources
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <span class="tag green">
+        Supporting resources
+      </span>
+
+    </div>
+
+
+    <div class="asset-body">
+
+
+      <div class="three-col">
+
+
+        <div class="info-box">
+
+          <div class="resource-icon">
+            01
+          </div>
+
+          <h4>
+            Behaviour cards
+          </h4>
+
+          <p>
+            Small cards showing Listen, Contribute
+            and Build, with one concrete example
+            for each.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="resource-icon">
+            02
+          </div>
+
+          <h4>
+            Teacher observation sheet
+          </h4>
+
+          <p>
+            Quick tick-and-note grid for recording
+            observable behaviours during group work.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="resource-icon">
+            03
+          </div>
+
+          <h4>
+            Student reflection card
+          </h4>
+
+          <p>
+            Three prompts that connect what students
+            did with what they want to improve.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="resource-icon">
+            04
+          </div>
+
+          <h4>
+            Sentence starters
+          </h4>
+
+          <p>
+
+            <span class="tag">
+              “I agree because…”
+            </span>
+
+            <span class="tag">
+              “Can you explain…?”
+            </span>
+
+            <span class="tag">
+              “Building on that…”
+            </span>
+
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="resource-icon">
+            05
+          </div>
+
+          <h4>
+            Extension prompts
+          </h4>
+
+          <p>
+            Prompts that challenge students to
+            analyse group decisions and explain
+            how contributions changed the outcome.
+          </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="resource-icon">
+            06
+          </div>
+
+          <h4>
+            Reteach prompt
+          </h4>
+
+          <p>
+            A short scenario where students identify
+            what a team member could do differently.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="callout" style="margin-top:22px">
+
+        <strong>
+          Design choice:
+        </strong>
+
+        These resources are intentionally small.
+        The goal isn't to generate a huge pack of
+        AI material. It is to create only what makes
+        the teaching routine easier.
+
+      </div>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+
+<!-- =======================================================
+     ASSET 5
+======================================================= -->
+
+<section id="routine">
+
+  <div class="section-heading">
+
+    <span class="kicker">
+      Asset 05
+    </span>
+
+    <h2>
+      My Repeatable AI Routine
+    </h2>
+
+    <p>
+      This is the asset I would carry forward from the course:
+      a repeatable process rather than a single successful prompt.
+    </p>
+
+  </div>
+
+
+  <article class="asset">
+
+    <div class="asset-header">
+
+      <div class="asset-heading">
+
+        <div class="asset-number">
+          5
+        </div>
+
+        <div>
+
+          <h3>
+            Human-Led Lesson Design Loop
+          </h3>
+
+          <div class="asset-subtitle">
+            A reusable workflow for future lessons
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <span class="tag blue">
+        Repeatable
+      </span>
+
+    </div>
+
+
+    <div class="asset-body">
+
+
+      <div class="workflow">
+
+
+        <div class="workflow-step">
+
+          <div class="number">
+            STEP 01
+          </div>
+
+          <h4>
+            Define
+          </h4>
+
+          <p>
+            I decide what students actually
+            need to learn or practise.
+          </p>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+          <div class="number">
+            STEP 02
+          </div>
+
+          <h4>
+            Describe
+          </h4>
+
+          <p>
+           I give the LLM my context, constraints and rough idea.
+
+          </p>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+          <div class="number">
+            STEP 03
+          </div>
+
+          <h4>
+            Challenge
+          </h4>
+
+          <p>
+ I ask the LLM to find gaps, misconceptions and alternatives.
+
+          </p>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+          <div class="number">
+            STEP 04
+          </div>
+
+          <h4>
+            Build
+          </h4>
+
+          <p>
+            I use the useful suggestions to
+            create activities and resources.
+          </p>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+          <div class="number">
+            STEP 05
+          </div>
+
+          <h4>
+            Decide
+          </h4>
+
+          <p>
+            I review, edit, reject or keep
+            the output before using it.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <h3 style="margin-top:30px">
+        Example of a reusable prompt
+      </h3>
+
+
+      <div class="prompt" id="promptText">
+
+        <button
+          class="copy-btn"
+          onclick="copyPrompt()">
+
+          Copy
+
+        </button>
+
+
+  
+    I am an educator planning a lesson on
+    <strong>[topic / skill]</strong> for
+    <strong>[learner age / level]</strong>.
+  
+
+  <br>
+    Here is my initial idea and context:
+  
+
+  <br>
+    <em>
+      [Paste my rough lesson idea, learning objective,
+      classroom context, learner needs, constraints,
+      and anything I already know I want to do.]
+    </em>
+ 
+
+  <br>
+    Help me improve this without replacing my professional
+    judgment or completely changing my teaching approach.
+ 
+
+  <br>
+    First, analyse my idea. Identify:
+ 
+
+  <ul>
+    <li>
+      what is already working well;
+    </li>
+
+    <li>
+      possible gaps or weaknesses;
+    </li>
+
+    <li>
+      likely points of confusion or difficulty for learners;
+    </li>
+
+    <li>
+      opportunities to make the learning objective clearer;
+    </li>
+
+    <li>
+      opportunities for meaningful differentiation;
+    </li>
+
+    <li>
+      questions I could ask to check understanding.
+    </li>
+  </ul>
+
+  <br>
+    Then suggest improvements while preserving the parts
+    of my approach that are intentional and useful.
+    Give me alternatives where there is more than one
+    reasonable approach rather than assuming there is
+    one perfect solution.
+ 
+
+  <br>
+    Do not assume your suggestions are automatically
+    appropriate. Explain the reasoning behind important
+    choices and flag anything that I should verify based
+    on my learners, curriculum, classroom context,
+    or professional knowledge.
+ 
+
+  <br>
+    Once we have refined the lesson, help me create:
+  
+
+  <ol>
+    <li>
+      a clear lesson sequence;
+    </li>
+
+    <li>
+      a student activity aligned to the learning objective;
+    </li>
+
+    <li>
+      support or scaffolding for learners who need it;
+    </li>
+
+    <li>
+      an extension or challenge for learners who are ready;
+    </li>
+
+    <li>
+      observable assessment criteria;
+    </li>
+
+    <li>
+      teacher questioning prompts;
+    </li>
+
+    <li>
+      any simple supporting resources that would make
+      the lesson easier to teach.
+    </li>
+  </ol>
+
+  <br>
+    Keep the materials practical and realistic for an
+    actual classroom. Avoid adding activities simply
+    for the sake of using AI.
+
+
+  <br>
+    Finally, give me a short quality-control checklist
+    so I can review the finished materials myself before
+    using them with students.
+ 
+
+</div>
+</section>
+
+
+
+<!-- =======================================================
+     REFLECTION
+======================================================= -->
+
+<section id="reflection">
+
+  <div class="section-heading">
+
+    <span class="kicker">
+      Reflection
+    </span>
+
+    <h2>
+What I take away from the learning
+    </h2>
+
+    <p>
+      The value of the course is not simply in producing five
+      finished assets. It is in developing a way of working
+      with AI that can be adapted, questioned and improved
+      through real teaching practice.
+    </p>
+
+  </div>
+
+
+  <div class="comparison">
+
+
+    <div class="demo-card course">
+
+      <span class="demo-label">
+        What changed in my practice
+      </span>
+
+      <h3>
+        AI became part of the process
+      </h3>
+
+      <p>
+        The biggest value of using LLMs was not simply
+        generating teaching materials. It gave me another
+        way to examine my own thinking, test an idea and
+        quickly explore alternatives.
+      </p>
+
+      <ul>
+
+        <li>
+          I can start with an idea I already have
+        </li>
+
+        <li>
+          I can ask AI to challenge or expand my thinking
+        </li>
+
+        <li>
+          I can explore multiple approaches quickly
+        </li>
+
+        <li>
+          I can turn useful ideas into practical resources
+        </li>
+
+        <li>
+          I still make the final teaching decisions
+        </li>
+
+      </ul>
+
+      <span class="tag">
+        Human expertise remains central
+      </span>
+
+    </div>
+
+
+    <div class="demo-card practice">
+
+      <span class="demo-label">
+        What I would do next
+      </span>
+
+      <h3>
+        Iterate from real classroom experience
+      </h3>
+
+      <p>
+        The first version does not need to be the final version.
+        I can use what happens in practice to make both my
+        prompts and my teaching materials more useful over time.
+      </p>
+
+      <ul>
+
+        <li>
+          Give LLM better context about my learners
+        </li>
+
+        <li>
+          Refine prompts based on what actually worked
+        </li>
+
+        <li>
+          Compare generated options before choosing
+        </li>
+
+        <li>
+          Keep the resources that prove useful
+        </li>
+
+        <li>
+          Build a library of repeatable workflows
+        </li>
+
+      </ul>
+
+      <span class="tag blue">
+        Improvement happens through iteration
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="callout green" style="margin-top:24px">
+
+    <strong>
+      My takeaway:
+    </strong>
+
+    <p style="margin-bottom:0">
+
+      We do not need to reproduce any particular AI workflow
+ exactly the way a single course or learning material
+      demonstrates. The more useful outcome is understanding
+      the principles well enough to adapt them to the way we
+      already work as an educator/trainer/learning designer.
+
+    </p>
+
+  </div>
+
+
+
+<div class="mindset-panel">
+
+  <div class="section-heading">
+
+    <span class="kicker">
+      The mindset
+    </span>
+
+    <h2>
+      Start → test → reflect → improve
+    </h2>
+
+    <p>
+      The portfolio is therefore not a finished endpoint.
+      It is a starting point for a workflow that can become
+      more effective with each iteration.
+    </p>
+
+  </div>
+
+
+  <div class="mindset-cards">
+
+
+    <article class="mindset-card">
+
+      <span class="mindset-step">
+        01 · START
+      </span>
+
+      <h3>
+        Bring my expertise
+      </h3>
+
+      <p>
+        Begin with what I already know about the subject,
+        learners and classroom context.
+      </p>
+
+    </article>
+
+
+    <article class="mindset-card">
+
+      <span class="mindset-step">
+        02 · TEST
+      </span>
+
+      <h3>
+        Work with AI
+      </h3>
+
+      <p>
+        Use LLMs to question, develop and explore possible approaches.
+
+      </p>
+
+    </article>
+
+
+    <article class="mindset-card">
+
+      <span class="mindset-step">
+        03 · REFLECT
+      </span>
+
+      <h3>
+        Look at what happened
+      </h3>
+
+      <p>
+        Consider what was useful, what was not, and
+        what students actually responded to.
+      </p>
+
+    </article>
+
+
+    <article class="mindset-card">
+
+      <span class="mindset-step">
+        04 · ITERATE
+      </span>
+
+      <h3>
+        Make the next version better
+      </h3>
+
+      <p>
+        Improve the prompt, activity, resource or workflow
+        rather than treating the first version as final.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+  <div class="wrap">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <strong>
+          AI for Educators
+        </strong>
+
+        <span>
+          Working portfolio · Demonstration
+        </span>
+
+      </div>
+
+
+      <div class="footer-author">
+
+        <span>
+          Prepared by
+        </span>
+
+        <strong>
+          Saheli Basu
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-line"></div>
+
+
+    <div class="footer-middle">
+
+      <p>
+This is a fictional-but-realistic portfolio created for
+demonstration purposes. It brings together ideas and practices
+from AI-focused learning, guidance and supporting materials,
+adapted into an educator-led workflow.
+
+      </p>
+
+      <p>
+        The materials are a starting point—not a finished
+        endpoint. They can become better through use,
+        reflection, feedback and iteration.
+      </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        Start with expertise
+      </span>
+
+      <span class="footer-arrow">→</span>
+
+      <span>
+        work with AI
+      </span>
+
+      <span class="footer-arrow">→</span>
+
+      <span>
+        review
+      </span>
+
+      <span class="footer-arrow">→</span>
+
+      <span>
+        reflect
+      </span>
+
+      <span class="footer-arrow">→</span>
+
+      <span>
+        iterate
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
