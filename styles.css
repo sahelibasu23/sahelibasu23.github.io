@@ -1052,6 +1052,7 @@ footer p { font-size: 0.9rem; margin: 0; }
   .assessment-domain-grid { grid-template-columns: 1fr; }
 }
 
+
 .hero-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
